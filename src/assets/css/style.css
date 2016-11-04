@@ -1,6 +1,6 @@
 a{text-decoration: none !important;}
 .container{padding: 0px 10px;width: 100%;}
-.header{position: fixed;top: 0;left: 0;width: 100%;box-shadow: 0 3px 3px #f4f4f4}
+.header{position: fixed;top: 0;left: 0;width: 100%;box-shadow: 0 3px 3px #f4f4f4;z-index: 999}
 .logo-container{padding: 10px;background-color: #2CA2F9;overflow: hidden;height: 51px;}
 .head-logo{height: 31px;float: left;height: 100%}
 .head-logo img{height: 100%}

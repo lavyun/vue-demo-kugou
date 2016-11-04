@@ -1,12 +1,14 @@
 <template>
   <div>
-    <mt-navbar v-model="selected" class="container"  @click.native="goRouter">
-      <mt-tab-item id="head-nav1">新歌</mt-tab-item>
-      <mt-tab-item id="head-nav2">排行</mt-tab-item>
-      <mt-tab-item id="head-nav3">歌单</mt-tab-item>
-      <mt-tab-item id="head-nav4">歌手</mt-tab-item>
-      <mt-tab-item id="head-nav5">彩铃</mt-tab-item>
-    </mt-navbar>
+
+      <mt-navbar v-model="selected" class="container"  @click.native="goRouter">
+        <mt-tab-item id="head-nav1">新歌</mt-tab-item>
+        <mt-tab-item id="head-nav2">排行</mt-tab-item>
+        <mt-tab-item id="head-nav3">歌单</mt-tab-item>
+        <mt-tab-item id="head-nav4">歌手</mt-tab-item>
+        <mt-tab-item id="head-nav5">彩铃</mt-tab-item>
+      </mt-navbar>
+
   </div>
 </template>
 

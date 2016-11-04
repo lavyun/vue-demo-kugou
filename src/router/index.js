@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+
 const route = new VueRouter({
 	mode:'history',
 	routes:[{
@@ -16,7 +17,14 @@ const route = new VueRouter({
     path:'/singer',component:require('../views/singer')
   },{
     path:'*',redirect:'/index'
-  }]
+  }],
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
 
 

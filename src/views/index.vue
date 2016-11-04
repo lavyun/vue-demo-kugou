@@ -15,8 +15,10 @@
       </mt-swipe-item>
     </mt-swipe>
 
-    <div v-for="item in nameItems">
-      {{item}}
+    <div>
+      <mt-cell v-for="(item,index) in nameItems" :title="item" @click.native="playAudio">
+        <img src="http://m.kugou.com/v3/static/images/index/download_icon_2.png" alt="" width="20" height="20">
+      </mt-cell>
     </div>
   </div>
 
@@ -25,11 +27,13 @@
 
 <script type="es6">
   import { Swipe, SwipeItem } from 'mint-ui';
+  import { Cell } from 'mint-ui';
 
   export default{
     data(){
       return {
-        nameItems:[]
+        nameItems:[],
+        statusItems:[]
       }
     },
     created(){
@@ -53,7 +57,20 @@
           var title=list[i].querySelector('.panel-songs-item-name span').innerText;
           this.nameItems.push(title)
         }
-        console.log(this.nameItems)
+
+        for(var j=0;j<list.length;j++){
+          var song={};
+          var songId=list[j].id.substr(6)
+          song.id=songId;
+          this.statusItems.push(song);
+        }
+        console.log(this.nameItems);
+        console.log(this.statusItems)
+      },
+      playAudio(){
+        this.$http.get('http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=740BFABFA510726FC2FCB8F0FAC6E34F').then((res)=>{
+          console.log(res.data);
+        })
       }
     }
   }

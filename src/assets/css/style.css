@@ -1,0 +1,11 @@
+a{text-decoration: none !important;}
+.container{padding: 0px 10px;width: 100%;}
+.header{position: fixed;top: 0;left: 0;width: 100%;box-shadow: 0 3px 3px #f4f4f4}
+.logo-container{padding: 10px;background-color: #2CA2F9;overflow: hidden;height: 51px;}
+.head-logo{height: 31px;float: left;height: 100%}
+.head-logo img{height: 100%}
+.head-download{float:left;height: 31px;width: 25%;margin-left: 4%;line-height: 31px;}
+.head-download a{display: block;height: 100%;width: 100%;border: 1px solid #fff;text-align: center;color: #fff;border-radius: 5px;}
+.head-search{float: right;height: 31px;padding: 3px 0}
+.head-search img{height: 100%}
+.main{margin-top: 100px;}

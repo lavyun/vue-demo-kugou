@@ -1,0 +1,65 @@
+<template>
+  <div>
+    <mt-swipe :auto="5000">
+      <mt-swipe-item>
+        <img src="../assets/banner1.jpg" alt="">
+      </mt-swipe-item>
+      <mt-swipe-item>
+        <img src="../assets/banner2.jpg" alt="">
+      </mt-swipe-item>
+      <mt-swipe-item>
+        <img src="../assets/banner3.jpg" alt="">
+      </mt-swipe-item>
+      <mt-swipe-item>
+        <img src="../assets/banner4.jpg" alt="">
+      </mt-swipe-item>
+    </mt-swipe>
+
+    <div v-for="item in nameItems">
+      {{item}}
+    </div>
+  </div>
+
+
+</template>
+
+<script type="es6">
+  import { Swipe, SwipeItem } from 'mint-ui';
+
+  export default{
+    data(){
+      return {
+        nameItems:[]
+      }
+    },
+    created(){
+      this.get()
+    },
+    components:{Swipe, SwipeItem},
+    methods:{
+      init(){
+
+      },
+      get(){
+        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com&url2=').then((res) => {
+          this.parseData(res.data)
+        })
+      },
+      parseData(data){
+        var div=document.createElement('div');
+        div.innerHTML=data;
+        var list=div.querySelectorAll('.panel-songslist-item');
+        for(var i=0;i<list.length;i++){
+          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
+          this.nameItems.push(title)
+        }
+        console.log(this.nameItems)
+      }
+    }
+  }
+</script>
+<style>
+  .mint-swipe{height: 39vw !important;}
+  .mint-swipe-indicator{width: 12px !important;height: 12px !important;}
+  .mint-swipe-indicators{bottom: 5px !important;}
+</style>

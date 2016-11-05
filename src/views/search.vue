@@ -5,7 +5,7 @@
           <span class="search-icon"></span>
           <input type="text" v-model="keyword" placeholder="歌手/歌名/拼音" @keydown.enter="search">
         </div>
-        <button href="javascript:;" @click="getList" class="search-btn">搜索</button>
+        <button href="javascript:;" @click="search" class="search-btn">搜索</button>
       </div>
 
       <div class="search-list" v-show="togglePanel">
@@ -14,7 +14,12 @@
       </div>
 
       <div class="songs-list" v-show="!togglePanel">
-
+          <div class="search-total">
+            共有{{total}}条搜索结果
+          </div>
+          <mt-cell v-for="(item,index) in songList" :title="item.filename" @click.native="playAudio(index)">
+            <img src="../../static/download_icon.png" alt="" width="20" height="20">
+          </mt-cell>
       </div>
   </div>
 </template>
@@ -26,7 +31,9 @@
       return {
         keyword:'',
         hotList:[],
-        togglePanel:false
+        togglePanel:true,
+        songList:[],
+        total:null
       }
     },
     created(){
@@ -49,8 +56,27 @@
         this.search()
       },
       search(){
+        this.togglePanel=false;
+        Indicator.open({
+          text: '加载中...',
+          spinnerType: 'fading-circle'
+        });
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/song?keyword='+this.keyword+'&page=1&pagesize=30&url2=').then((res)=>{
-          console.log(JSON.parse(res.data))
+          var list=JSON.parse(res.data).data.info;
+          this.total=JSON.parse(res.data).data.total
+          this.songList= [...list.map(
+            ({filename,hash})=>({filename,hash})
+          )];
+          Indicator.close();
+        })
+      },
+      playAudio(index){
+        console.log(this.songList[index].hash)
+        this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
+          //var url=JSON.parse(res.data);
+          var url=JSON.parse(res.data).url;
+          console.log(url)
+          this.$store.commit('setUrl',url);
         })
       }
     }

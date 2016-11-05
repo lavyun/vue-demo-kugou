@@ -16,8 +16,8 @@
     </mt-swipe>
 
     <div>
-      <mt-cell v-for="(item,index) in nameItems" :title="item" @click.native="playAudio">
-        <img src="http://m.kugou.com/v3/static/images/index/download_icon_2.png" alt="" width="20" height="20">
+      <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
+        <img src="../../static/download_icon.png" alt="" width="20" height="20">
       </mt-cell>
     </div>
   </div>
@@ -30,8 +30,7 @@
   export default{
     data(){
       return {
-        nameItems:[],
-        statusItems:[],
+        songList:[]
       }
     },
     created(){
@@ -56,23 +55,21 @@
         div.innerHTML=data;
         var list=div.querySelectorAll('.panel-songslist-item');
         for(var i=0;i<list.length;i++){
-          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
-          this.nameItems.push(title)
-        }
-
-        for(var j=0;j<list.length;j++){
           var song={};
-          var songId=list[j].id.substr(6)
-          song.id=songId;
-          this.statusItems.push(song);
+          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
+          var hash=list[i].id.substr(6);
+          song.title=title;song.hash=hash;
+          this.songList.push(song)
         }
         Indicator.close();
-        console.log(this.nameItems);
-        console.log(this.statusItems);
       },
-      playAudio(){
-        this.$http.get('http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=740BFABFA510726FC2FCB8F0FAC6E34F').then((res)=>{
-          console.log(res.data);
+      playAudio(index){
+        console.log(this.songList[index].hash)
+        this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
+          //var url=JSON.parse(res.data);
+          var url=JSON.parse(res.data).url;
+          console.log(url)
+          this.$store.commit('setUrl',url);
         })
       }
     }

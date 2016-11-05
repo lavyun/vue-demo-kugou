@@ -15,4 +15,6 @@ a{text-decoration: none !important;}
 .search-input input{width: 90%;height: 100%;display: inline-block;padding: 0 10px 0 0;border: none;outline: none;background-color: transparent}
 .search-btn{display: block;height: 100%;width: 18%;background-color: #2ba2fa;float: right;border-radius: 7px;color: #fff;font-size: 16px;text-align: center;line-height: 35px;border: none;outline: none}
 .search-list-title{padding: 10px;color: deepskyblue}
+.search-total{padding: 5px 10px;background-color: #e1e1e1;color: #484848}
+.audio-panel{position: fixed;bottom: 0;left: 0;z-index: 999;width: 100%;}
 

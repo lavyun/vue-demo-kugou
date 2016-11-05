@@ -4,7 +4,6 @@ Vue.use(VueRouter)
 
 
 const route = new VueRouter({
-	mode:'history',
 	routes:[{
     path:'/index',component:require('../views/index')
   },{

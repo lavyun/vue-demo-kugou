@@ -8,4 +8,11 @@ a{text-decoration: none !important;}
 .head-download a{display: block;height: 100%;width: 100%;border: 1px solid #fff;text-align: center;color: #fff;border-radius: 5px;}
 .head-search{float: right;height: 31px;padding: 3px 0}
 .head-search img{height: 100%}
-.main{margin-top: 100px;}
+.main{margin-top: 94px;}
+.search-panel{padding: 10px;background-color: #fbfbfb;height: 55px;}
+.search-input{width: 80%;height: 100%;display: block;border: 1px solid #e5e5e5;border-radius: 7px;float: left;background-color: #fff}
+.search-icon{display: block;float:left;width: 10%;height: 100%;background: url("http://m.kugou.com/v3/static/images/index/search_icon.png") no-repeat center;background-size: auto 100%}
+.search-input input{width: 90%;height: 100%;display: inline-block;padding: 0 10px 0 0;border: none;outline: none;background-color: transparent}
+.search-btn{display: block;height: 100%;width: 18%;background-color: #2ba2fa;float: right;border-radius: 7px;color: #fff;font-size: 16px;text-align: center;line-height: 35px;border: none;outline: none}
+.search-list-title{padding: 10px;color: deepskyblue}
+

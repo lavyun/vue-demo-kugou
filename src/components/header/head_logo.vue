@@ -6,10 +6,8 @@
       </a>
     </div>
     <div class="head-download"><a href="#">下载酷狗</a></div>
-    <div class="head-search">
-      <a href="#">
+    <div class="head-search"  @click="searchRouter">
         <img src="http://m.kugou.com/v3/static/images/index/search.png" alt="">
-      </a>
     </div>
   </div>
 </template>
@@ -21,6 +19,12 @@
       return {
 
       }
+    },
+    methods:{
+      searchRouter(){
+        this.$router.push({path:'search'})
+      }
     }
   }
+
 </script>

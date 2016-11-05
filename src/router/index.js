@@ -16,6 +16,8 @@ const route = new VueRouter({
   },{
     path:'/singer',component:require('../views/singer')
   },{
+    path:'/search',component:require('../views/search')
+  },{
     path:'*',redirect:'/index'
   }],
   scrollBehavior (to, from, savedPosition) {

@@ -26,27 +26,29 @@
 </template>
 
 <script type="es6">
-  import { Swipe, SwipeItem } from 'mint-ui';
-  import { Cell } from 'mint-ui';
-
+  import { Swipe, SwipeItem,Indicator,Cell } from 'mint-ui';
   export default{
     data(){
       return {
         nameItems:[],
-        statusItems:[]
+        statusItems:[],
       }
     },
     created(){
       this.get()
     },
-    components:{Swipe, SwipeItem},
+    components:{},
     methods:{
       init(){
 
       },
       get(){
+        Indicator.open({
+          text: '加载中...',
+          spinnerType: 'fading-circle'
+        });
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com&url2=').then((res) => {
-          this.parseData(res.data)
+          this.parseData(res.data);
         })
       },
       parseData(data){
@@ -64,8 +66,9 @@
           song.id=songId;
           this.statusItems.push(song);
         }
+        Indicator.close();
         console.log(this.nameItems);
-        console.log(this.statusItems)
+        console.log(this.statusItems);
       },
       playAudio(){
         this.$http.get('http://m.kugou.com/app/i/getSongInfo.php?cmd=playInfo&hash=740BFABFA510726FC2FCB8F0FAC6E34F').then((res)=>{

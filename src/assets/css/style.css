@@ -1,8 +1,8 @@
 a{text-decoration: none !important;}
-.container{padding: 0px 10px;width: 100%;}
-.header{position: fixed;top: 0;left: 0;width: 100%;box-shadow: 0 3px 3px #f4f4f4;z-index: 990}
-.logo-container{padding: 10px;background-color: #2CA2F9;overflow: hidden;height: 51px;}
-.head-logo{height: 31px;float: left;height: 100%}
+.container{padding: 0 10px;width: 100%;}
+.header{position: fixed;top: 0;left: 0;width: 100%;box-shadow: 0 3px 3px #f4f4f4;z-index: 999}
+.logo-container{padding: 10px;background-color: #2CA2F9;overflow: hidden;height: 51px;position: relative;}
+.head-logo{float: left;height: 100%}
 .head-logo img{height: 100%}
 .head-download{float:left;height: 31px;width: 25%;margin-left: 4%;line-height: 31px;}
 .head-download a{display: block;height: 100%;width: 100%;border: 1px solid #fff;text-align: center;color: #fff;border-radius: 5px;}
@@ -18,10 +18,10 @@ a{text-decoration: none !important;}
 .search-total{padding: 5px 10px;background-color: #e1e1e1;color: #484848}
 .audio-panel{position: fixed;bottom: 0;left: 0;z-index: 999;width: 100%;}
 .rank-head{width: 100%;height: 43px;position: fixed;background: -webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0));top: 51px;z-index: 999;color: #fff;font-size: 18px;text-align: center;line-height: 43px;}
-.rank-banner-wrap{width: 100%;height: 200px;position: absolute;top: 51px;z-index: 998}
+.rank-banner-wrap{width: 100%;height: 200px;margin-top: -43px;position: relative}
 .rank-head-back{display: block;float: left;width: 24px;height: 100%;background: url("../../../static/goback_icon.png") no-repeat center;background-size: 60% 60%;position: absolute;left: 5px;top:0}
-.rank-status{height: 43px;width: 100%;position: absolute;bottom: 0;left: 0;background: -webkit-linear-gradient(bottom,rgba(0,0,0,.6),rgba(0,0,0,0));padding-top: 10px;font-size: 14px;color: #fff}
-
-
+.rank-status{height: 43px;width: 100%;position: absolute;bottom: 0;left: 0;background: -webkit-linear-gradient(bottom,rgba(0,0,0,.6),rgba(0,0,0,0));line-height:43px;font-size: 15px;color: #fff}
+.rank-info-list .rank-index{position: absolute;left: 20px;font-size: 12px}
+.rank-info-list .mint-cell-title{padding-left: 35px;}
 
 

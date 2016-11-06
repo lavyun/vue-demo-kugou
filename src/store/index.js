@@ -8,7 +8,9 @@ Vue.use(Vuex)
 const store=new Vuex.Store({
   state:{
     audioUrl:'',
-    audioFlag:false
+    audioFlag:false,
+    rankInfo:false,
+    rankTitle:''
   },
   getters:{
     audioUrl(state){
@@ -16,6 +18,12 @@ const store=new Vuex.Store({
     },
     audioFlag(state){
       return state.audioFlag
+    },
+    rankInfo(state){
+      return state.rankInfo
+    },
+    rankTitle(state){
+      return state.rankTitle
     }
   },
   mutations:{
@@ -27,6 +35,16 @@ const store=new Vuex.Store({
     },
     hidePlay(state){
       state.audioFlag=false;
+    },
+    showRank(state){
+      state.rankInfo=true;
+    },
+    setRankTitle(state,title){
+      state.rankTitle=title;
+    },
+    hideRank(state){
+      state.rankInfo=false;
+      state.rankTitle=''
     }
   }
 })

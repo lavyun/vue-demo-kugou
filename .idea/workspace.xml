@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da6beba7-4026-4027-b5f6-7d62d2bdcd92" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/css/style.css" afterPath="$PROJECT_DIR$/src/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header/head.vue" afterPath="$PROJECT_DIR$/src/components/header/head.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/rank.vue" afterPath="$PROJECT_DIR$/src/views/rank.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/rank_info.vue" afterPath="$PROJECT_DIR$/src/views/rank_info.vue" />
     </list>
     <ignored path="kugouM.iws" />
@@ -25,15 +27,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="player.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/player.vue">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2105265">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <marker date="1478348883743" expanded="true" signature="193:272" placeholder="{&quot;name&quot;: 'player'...}" />
-                <marker date="1478348883743" expanded="true" signature="227:268" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="-8.571428">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -41,48 +40,70 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.428572">
+            <state vertical-scroll-proportion="-5.714286">
               <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50119334">
-              <caret line="21" column="189" selection-start-line="21" selection-start-column="189" selection-end-line="21" selection-end-column="189" />
+            <state vertical-scroll-proportion="-8.421053">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rank_info.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rank_info.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/rank_info.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1578948">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.3341289">
+              <caret line="14" column="148" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
               <folding>
-                <marker date="1478422604772" expanded="true" signature="408:1122" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="420:486" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="435:480" placeholder="{&quot;imgSrc&quot;: ''...}" />
-                <marker date="1478422604772" expanded="true" signature="563:616" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="582:609" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="630:1118" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="643:880" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="825:871" placeholder="{...}" />
-                <marker date="1478422604772" expanded="true" signature="903:1112" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="895:2779" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="907:1017" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="922:1011" placeholder="{&quot;imgSrc&quot;: ''...}" />
+                <marker date="1478441630787" expanded="true" signature="1094:1286" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="1113:1279" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="1175:1251" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478441630787" expanded="true" signature="1322:1380" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="1394:2775" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="1407:1672" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="1589:1663" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="1695:2404" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="2159:2396" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="2428:2769" placeholder="{...}" />
+                <marker date="1478441630787" expanded="true" signature="2592:2760" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rank-head.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/header/rank-head.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.1578948">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding>
+                <marker date="1478438560905" expanded="true" signature="186:233" placeholder="{&quot;name&quot;: 'rank-head'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/header/head.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.368421">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+              <folding>
+                <marker date="1478438393602" expanded="true" signature="362:540" placeholder="{&quot;name&quot;: 'k-head'...}" />
+                <marker date="1478438393602" expanded="true" signature="374:405" placeholder="{...}" />
+                <marker date="1478438393602" expanded="true" signature="389:399" placeholder="{...}" />
+                <marker date="1478438393602" expanded="true" signature="420:473" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -91,19 +112,20 @@
       <file leaf-file-name="rank.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/rank.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.526316">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state vertical-scroll-proportion="-7.7192984">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
               <folding>
-                <marker date="1478410382992" expanded="true" signature="318:1308" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="330:380" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="345:374" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="395:423" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="437:1304" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="454:773" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="479:555" placeholder="{&quot;text&quot;: '加载中...'...}" />
-                <marker date="1478410382992" expanded="true" signature="688:764" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="796:1298" placeholder="{...}" />
-                <marker date="1478410382992" expanded="true" signature="972:1290" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="318:1379" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="330:380" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="345:374" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="395:423" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="429:495" placeholder="//..." />
+                <marker date="1478429790837" expanded="true" signature="508:1375" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="525:844" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="550:626" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478429790837" expanded="true" signature="759:835" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="867:1369" placeholder="{...}" />
+                <marker date="1478429790837" expanded="true" signature="1043:1361" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -129,8 +151,8 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3508772">
-              <caret line="47" column="11" selection-start-line="44" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
+            <state vertical-scroll-proportion="-9.438597">
+              <caret line="73" column="7" selection-start-line="65" selection-start-column="6" selection-end-line="73" selection-end-column="7" />
               <folding>
                 <marker date="1478347699707" expanded="true" signature="782:2084" placeholder="{...}" />
                 <marker date="1478347699707" expanded="true" signature="794:844" placeholder="{...}" />
@@ -200,19 +222,20 @@
         <option value="$PROJECT_DIR$/src/views/singer.vue" />
         <option value="$PROJECT_DIR$/src/views/song_list.vue" />
         <option value="$PROJECT_DIR$/src/views/plist.vue" />
-        <option value="$PROJECT_DIR$/src/components/header/head.vue" />
         <option value="$PROJECT_DIR$/src/components/header/head_nav.vue" />
         <option value="$PROJECT_DIR$/src/components/header/head_logo.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/views/index.vue" />
         <option value="$PROJECT_DIR$/src/components/player.vue" />
         <option value="$PROJECT_DIR$/src/views/search.vue" />
-        <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/views/rank.vue" />
-        <option value="$PROJECT_DIR$/src/views/rank_info.vue" />
+        <option value="$PROJECT_DIR$/src/components/header/head.vue" />
+        <option value="$PROJECT_DIR$/src/components/header/rank-head.vue" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/views/rank_info.vue" />
       </list>
     </option>
   </component>
@@ -357,6 +380,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kugouM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kugouM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="header" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kugouM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kugouM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -471,10 +534,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17334037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14541623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -511,14 +574,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -531,6 +586,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <marker date="1478438393602" expanded="true" signature="362:540" placeholder="{&quot;name&quot;: 'k-head'...}" />
+            <marker date="1478438393602" expanded="true" signature="374:405" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="389:399" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="420:473" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -553,6 +614,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <marker date="1478438393602" expanded="true" signature="362:540" placeholder="{&quot;name&quot;: 'k-head'...}" />
+            <marker date="1478438393602" expanded="true" signature="374:405" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="389:399" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="420:473" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -658,6 +725,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <marker date="1478438393602" expanded="true" signature="362:540" placeholder="{&quot;name&quot;: 'k-head'...}" />
+            <marker date="1478438393602" expanded="true" signature="374:405" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="389:399" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="420:473" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,6 +817,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <marker date="1478438393602" expanded="true" signature="362:540" placeholder="{&quot;name&quot;: 'k-head'...}" />
+            <marker date="1478438393602" expanded="true" signature="374:405" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="389:399" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="420:473" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -865,25 +944,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/head.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,14 +967,6 @@
             <marker date="1478348883743" expanded="true" signature="193:272" placeholder="{&quot;name&quot;: 'player'...}" />
             <marker date="1478348883743" expanded="true" signature="227:268" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.428572">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -943,10 +999,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/header/head_nav.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3508772">
-          <caret line="47" column="11" selection-start-line="44" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
+          <caret line="3" column="79" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
+          <folding>
+            <marker date="1478275143291" expanded="true" signature="491:1072" placeholder="{&quot;name&quot;: 'head-nav'...}" />
+            <marker date="1478275143291" expanded="true" signature="524:583" placeholder="{...}" />
+            <marker date="1478275143291" expanded="true" signature="539:577" placeholder="{&quot;selected&quot;: 'head-nav1'...}" />
+            <marker date="1478275143291" expanded="true" signature="631:1068" placeholder="{...}" />
+            <marker date="1478275143291" expanded="true" signature="649:1062" placeholder="{...}" />
+            <marker date="1478275143291" expanded="true" signature="740:1054" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.438597">
+          <caret line="73" column="7" selection-start-line="65" selection-start-column="6" selection-end-line="73" selection-end-column="7" />
           <folding>
             <marker date="1478347699707" expanded="true" signature="782:2084" placeholder="{...}" />
             <marker date="1478347699707" expanded="true" signature="794:844" placeholder="{...}" />
@@ -965,63 +1036,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/head_nav.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/header/head.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3508772">
-          <caret line="3" column="79" selection-start-line="3" selection-start-column="79" selection-end-line="3" selection-end-column="79" />
+        <state vertical-scroll-proportion="-7.368421">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
           <folding>
-            <marker date="1478275143291" expanded="true" signature="491:1072" placeholder="{&quot;name&quot;: 'head-nav'...}" />
-            <marker date="1478275143291" expanded="true" signature="524:583" placeholder="{...}" />
-            <marker date="1478275143291" expanded="true" signature="539:577" placeholder="{&quot;selected&quot;: 'head-nav1'...}" />
-            <marker date="1478275143291" expanded="true" signature="631:1068" placeholder="{...}" />
-            <marker date="1478275143291" expanded="true" signature="649:1062" placeholder="{...}" />
-            <marker date="1478275143291" expanded="true" signature="740:1054" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="362:540" placeholder="{&quot;name&quot;: 'k-head'...}" />
+            <marker date="1478438393602" expanded="true" signature="374:405" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="389:399" placeholder="{...}" />
+            <marker date="1478438393602" expanded="true" signature="420:473" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/rank.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.526316">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        <state vertical-scroll-proportion="-7.7192984">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
-            <marker date="1478410382992" expanded="true" signature="318:1308" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="330:380" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="345:374" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="395:423" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="437:1304" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="454:773" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="479:555" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478410382992" expanded="true" signature="688:764" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="796:1298" placeholder="{...}" />
-            <marker date="1478410382992" expanded="true" signature="972:1290" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="318:1379" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="330:380" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="345:374" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="395:423" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="429:495" placeholder="//..." />
+            <marker date="1478429790837" expanded="true" signature="508:1375" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="525:844" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="550:626" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478429790837" expanded="true" signature="759:835" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="867:1369" placeholder="{...}" />
+            <marker date="1478429790837" expanded="true" signature="1043:1361" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.571428">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.714286">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.421053">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/rank-head.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1578948">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <marker date="1478438560905" expanded="true" signature="186:233" placeholder="{&quot;name&quot;: 'rank-head'...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/rank_info.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1578948">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.3341289">
+          <caret line="14" column="148" selection-start-line="14" selection-start-column="148" selection-end-line="14" selection-end-column="148" />
           <folding>
-            <marker date="1478422604772" expanded="true" signature="408:1122" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="420:486" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="435:480" placeholder="{&quot;imgSrc&quot;: ''...}" />
-            <marker date="1478422604772" expanded="true" signature="563:616" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="582:609" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="630:1118" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="643:880" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="825:871" placeholder="{...}" />
-            <marker date="1478422604772" expanded="true" signature="903:1112" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="895:2779" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="907:1017" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="922:1011" placeholder="{&quot;imgSrc&quot;: ''...}" />
+            <marker date="1478441630787" expanded="true" signature="1094:1286" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="1113:1279" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="1175:1251" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478441630787" expanded="true" signature="1322:1380" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="1394:2775" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="1407:1672" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="1589:1663" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="1695:2404" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="2159:2396" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="2428:2769" placeholder="{...}" />
+            <marker date="1478441630787" expanded="true" signature="2592:2760" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50119334">
-          <caret line="21" column="189" selection-start-line="21" selection-start-column="189" selection-end-line="21" selection-end-column="189" />
-          <folding />
         </state>
       </provider>
     </entry>

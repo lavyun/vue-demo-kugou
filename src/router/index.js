@@ -19,6 +19,8 @@ const route = new VueRouter({
   },{
     path:'/rank/info/:id',component:require('../views/rank_info')
   },{
+    path:'/plist/info/:id',component:require('../views/plist_info')
+  },{
     path:'*',redirect:'/index'
   }],
   scrollBehavior (to, from, savedPosition) {

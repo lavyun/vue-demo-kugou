@@ -1,18 +1,20 @@
 <template>
-  <div class="rank-info-content">
-    <!--<div class="rank-head container">-->
-        <!--<router-link to="/rank" class="rank-head-back"></router-link>-->
-        <!--{{title}}-->
-    <!--</div>-->
+  <div class="rank-info-content plist-info">
     <div class="rank-banner-wrap" :style="{'background':'url('+imgSrc+') no-repeat center'}">
       <div class="rank-status container">
         <p>{{updateTime}}</p>
       </div>
     </div>
 
+    <div class="plist-desp container">
+      <p class="plist-desp-p" :class="{'plist-desp-hide': hideDesp }">{{desp}}</p>
+      <img src="../../static/close_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
+      <img src="../../static/open_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-else>
+    </div>
+    <div class="plist-desp-bottom" style="width: 100%;height: 5px;background-color: #f1f1f1"></div>
+
     <div class="rank-info-list">
       <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
-        <span class="rank-index" :class="{'rank-list-good' : index<3, 'rank-list-first' : index==0, 'rank-list-second' : index==1, 'rank-list-third' : index==2}">{{index+1}}</span>
         <img src="../../static/download_icon.png" alt="" width="20" height="20">
       </mt-cell>
     </div>
@@ -27,14 +29,16 @@
         imgSrc:'',
         title:'',
         songList:[],
-        updateTime:''
+        updateTime:'',
+        desp:'',
+        hideDesp:true
       }
     },
     //通过路由的before钩子解除router-view缓存限制
     beforeRouteEnter (to, from, next) {
       next(vm => {
         vm.$store.commit('showHead');
-        vm.$store.commit('setHeadRouter','/rank');
+        vm.$store.commit('setHeadRouter','/plist')
         Indicator.open({
           text: '加载中...',
           spinnerType: 'snake'
@@ -49,7 +53,7 @@
     methods:{
       get(){
         var infoID=this.$route.params.id;
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/rank/info/&url2='+infoID).then((res)=>{
+        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/plist/list/&url2='+infoID).then((res)=>{
           Indicator.close()
           this.parseList(res.data)
         })
@@ -59,7 +63,7 @@
         div.innerHTML=data;
         this.imgSrc=div.querySelector('#imgBoxInfo img').src;
         this.title=div.querySelector('.page-title').innerText;
-        this.updateTime=div.querySelector('.rank-info-time span').innerText;
+        this.desp=div.querySelector('#introBox p').innerText;
         this.$store.commit('setHeadTitle',this.title);
         var list=div.querySelectorAll('.panel-songslist-item');
         this.songList = [];
@@ -79,15 +83,15 @@
           console.log(url)
           this.$store.commit('setUrl',url);
         })
+      },
+      toggleDesp(){
+        this.hideDesp=!this.hideDesp;
       }
     }
   }
 </script>
 
-<style>
-  .rank-list-good{display: inline-block;padding: 2px 8px;left: 12px !important;border-radius: 8px;color: #fff;margin-top: 3px !important;}
-  .rank-list-first{background-color: #E80000;}
-  .rank-list-second{background-color: #FF7200;}
-  .rank-list-third{background-color: #F8B300;}
+<style scoped>
+  .rank-banner-wrap{height: 250px;}
 </style>
 

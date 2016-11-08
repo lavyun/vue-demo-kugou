@@ -25,7 +25,7 @@
       getList(){
         Indicator.open({
           text: '加载中...',
-          spinnerType: 'fading-circle'
+          spinnerType: 'snake'
         });
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/rank/list&url2=').then((res)=>{
           Indicator.close();

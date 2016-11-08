@@ -44,7 +44,7 @@
       get(){
         Indicator.open({
           text: '加载中...',
-          spinnerType: 'fading-circle'
+          spinnerType: 'snake'
         });
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com&url2=').then((res) => {
           this.parseData(res.data);

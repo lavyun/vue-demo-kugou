@@ -9,8 +9,9 @@ const store=new Vuex.Store({
   state:{
     audioUrl:'',
     audioFlag:false,
-    rankInfo:false,
-    rankTitle:''
+    headInfo:false,
+    headTitle:'',
+    headRouter:''
   },
   getters:{
     audioUrl(state){
@@ -19,11 +20,14 @@ const store=new Vuex.Store({
     audioFlag(state){
       return state.audioFlag
     },
-    rankInfo(state){
-      return state.rankInfo
+    headInfo(state){
+      return state.headInfo
     },
-    rankTitle(state){
-      return state.rankTitle
+    headTitle(state){
+      return state.headTitle
+    },
+    headRouter(state){
+      return state.headRouter
     }
   },
   mutations:{
@@ -36,15 +40,18 @@ const store=new Vuex.Store({
     hidePlay(state){
       state.audioFlag=false;
     },
-    showRank(state){
-      state.rankInfo=true;
+    showHead(state){
+      state.headInfo=true;
     },
-    setRankTitle(state,title){
-      state.rankTitle=title;
+    setHeadTitle(state,title){
+      state.headTitle=title;
     },
-    hideRank(state){
-      state.rankInfo=false;
-      state.rankTitle=''
+    hideHead(state){
+      state.headInfo=false;
+      state.headTitle=''
+    },
+    setHeadRouter(state,router){
+      state.headRouter=router;
     }
   }
 })

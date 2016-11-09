@@ -1,9 +1,7 @@
 <template>
   <div class="rank-info-content plist-info">
-    <div class="rank-banner-wrap" :style="{'background':'url('+imgSrc+') no-repeat center'}">
-      <div class="rank-status container">
-        <p>{{updateTime}}</p>
-      </div>
+    <div class="rank-banner-wrap" :style="{'background-image':'url('+imgSrc+')','background-size': '100%','background-repeat': 'no-repeat','background-position': 'center'}">
+
     </div>
 
     <div class="plist-desp container">
@@ -91,6 +89,6 @@
 </script>
 
 <style scoped>
-  .rank-banner-wrap{height: 250px;}
+  .rank-banner-wrap{height: 250px;background-size: 100%}
 </style>
 

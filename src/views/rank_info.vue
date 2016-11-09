@@ -4,7 +4,7 @@
         <!--<router-link to="/rank" class="rank-head-back"></router-link>-->
         <!--{{title}}-->
     <!--</div>-->
-    <div class="rank-banner-wrap" :style="{'background':'url('+imgSrc+') no-repeat center'}">
+    <div class="rank-banner-wrap" :style="{'background-image':'url('+imgSrc+')','background-size': '100%','background-repeat': 'no-repeat','background-position': 'center'}">
       <div class="rank-status container">
         <p>{{updateTime}}</p>
       </div>

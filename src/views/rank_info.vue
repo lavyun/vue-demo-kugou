@@ -35,10 +35,6 @@
       next(vm => {
         vm.$store.commit('showHead');
         vm.$store.commit('setHeadRouter','/rank');
-        Indicator.open({
-          text: '加载中...',
-          spinnerType: 'snake'
-        });
         vm.get();
       })
     },
@@ -48,6 +44,10 @@
     },
     methods:{
       get(){
+        Indicator.open({
+          text: '加载中...',
+          spinnerType: 'snake'
+        });
         var infoID=this.$route.params.id;
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/rank/info/&url2='+infoID).then((res)=>{
           Indicator.close()

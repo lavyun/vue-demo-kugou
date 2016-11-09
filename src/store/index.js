@@ -11,7 +11,8 @@ const store=new Vuex.Store({
     audioFlag:false,
     headInfo:false,
     headTitle:'',
-    headRouter:''
+    headRouter:'',
+    headStyle:{'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'}
   },
   getters:{
     audioUrl(state){
@@ -28,6 +29,9 @@ const store=new Vuex.Store({
     },
     headRouter(state){
       return state.headRouter
+    },
+    headStyle(state){
+      return state.headStyle;
     }
   },
   mutations:{
@@ -52,6 +56,9 @@ const store=new Vuex.Store({
     },
     setHeadRouter(state,router){
       state.headRouter=router;
+    },
+    setHeadStyle(state,style){
+      state.headStyle=style;
     }
   }
 })

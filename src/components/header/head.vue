@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <headLogo></headLogo>
-    <rank-head v-if="headInfo" :title="headTitle" :to="headRouter"></rank-head>
+    <rank-head v-if="headInfo" :title="headTitle" :to="headRouter" :style="headStyle"></rank-head>
     <head-nav v-else></head-nav>
 
   </div>
@@ -19,7 +19,7 @@
       }
     },
     computed:{
-      ...mapGetters(['headInfo','headTitle','headRouter'])
+      ...mapGetters(['headInfo','headTitle','headRouter','headStyle'])
     },
     name:'k-head',
     components:{headLogo,headNav,rankHead}

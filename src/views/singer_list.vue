@@ -18,14 +18,14 @@
     beforeRouteEnter(to,from,next){
       next(vm=>{
         vm.$store.commit('showHead');
-        vm.$store.commit('setHeadRouter','/singer');
         vm.$store.commit('setHeadStyle',{'background':'#2CA2F9'})
         vm.getList();
       })
     },
     beforeRouteLeave(to,from,next){
       this.$store.commit('hideHead');
-      next()
+      this.$store.commit('resetHeadStyle')
+      next();
     },
     methods:{
       getList(){

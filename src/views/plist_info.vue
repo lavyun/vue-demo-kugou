@@ -38,7 +38,6 @@
     beforeRouteEnter (to, from, next) {
       next(vm => {
         vm.$store.commit('showHead');
-        vm.$store.commit('setHeadRouter','/plist')
         Indicator.open({
           text: '加载中...',
           spinnerType: 'snake'

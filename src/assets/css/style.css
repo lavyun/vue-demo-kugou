@@ -30,10 +30,12 @@ a{text-decoration: none !important;}
 .plist-desp{width: 100%;padding: 12px;font-size: 16px;position: relative;text-align: justify;}
 .plist-desp-p{padding-right: 40px;}
 .plist-desp-icon{display: block;width: 24px;height: 24px;position: absolute;right: 10px;top: 10px}
-.plist-desp-hide{overflow: hidden;height: 20px}
+.plist-desp-hide{overflow: hidden;height: 16px}
 .cell-group{margin: 15px 0;width: 100%;border: 1px solid #e4e4e4;border-radius: 5px;background-color: #fbfbfb}
 .cell-item{padding: 12px 15px;font-size: 15px;border-bottom: 1px solid #e4e4e4;position: relative}
 .cell-item:after{content: '';display: block;position: absolute;width: 12px;height: 100%;background: url("../../../static/arrow_icon.png") no-repeat center;background-size: 12px;top: 0;right: 15px}
 .cell-item:last-of-type{border: none}
-
+.order-img{width: 40px;}
+.order-img p{font-size: 13px;text-align: center;color: #2ba2fa}
+.ringtone .mint-cell{padding: 5px 0 5px 5px}
 

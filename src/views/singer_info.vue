@@ -73,9 +73,7 @@
         }
       },
       playAudio(index){
-        console.log(this.songList[index].hash)
         this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
-          //var url=JSON.parse(res.data);
           var url=JSON.parse(res.data).url;
           console.log(url)
           this.$store.commit('setUrl',url);

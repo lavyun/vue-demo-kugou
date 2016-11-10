@@ -7,19 +7,19 @@ Vue.use(Vuex)
 
 const store=new Vuex.Store({
   state:{
-    audioUrl:'',
-    audioFlag:false,
+    audio:{
+      songUrl:'',
+      imgUrl:'../../static/default.png',
+      title:'',
+      singer:''
+    },
+    audioLoadding:false,
     headInfo:false,
     headTitle:'',
     headStyle:{'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'}
   },
   getters:{
-    audioUrl(state){
-      return state.audioUrl
-    },
-    audioFlag(state){
-      return state.audioFlag
-    },
+    audio:state=>state.audio,
     headInfo(state){
       return state.headInfo
     },
@@ -28,11 +28,12 @@ const store=new Vuex.Store({
     },
     headStyle(state){
       return state.headStyle;
-    }
+    },
+    audioLoadding:state=>state.audioLoadding
   },
   mutations:{
-    setUrl(state,url){
-      state.audioUrl=url;
+    setAudio(state,audio){
+      state.audio=audio;
     },
     showPlayer(state){
       state.audioFlag=true;
@@ -55,6 +56,9 @@ const store=new Vuex.Store({
     },
     resetHeadStyle:state=>{
       state.headStyle={'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'};
+    },
+    toggleAudioLoadding:state=>{
+      state.audioLoadding=!state.audioLoadding;
     }
   }
 })

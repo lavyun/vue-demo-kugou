@@ -45,7 +45,14 @@
         }
       },
       playAudio(index){
-        this.$store.commit('setUrl',this.songList[index].songUrl);
+        this.$store.commit("toggleAudioLoadding");
+        var songUrl=this.songList[index].songUrl;
+        var imgUrl='../../static/default.png';
+        var title=this.songList[index].title;
+        var singer=this.songList[index].desp.split('|')[0];
+        var audio={songUrl,imgUrl,title,singer}
+        this.$store.commit("toggleAudioLoadding");
+        this.$store.commit('setAudio',audio);
       }
     }
   }

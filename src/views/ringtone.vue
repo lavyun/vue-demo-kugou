@@ -47,7 +47,7 @@
       playAudio(index){
         this.$store.commit("toggleAudioLoadding");
         var songUrl=this.songList[index].songUrl;
-        var imgUrl='../../static/default.png';
+        var imgUrl='http://m.kugou.com/v3/static/images/index/logo_kugou.png';
         var title=this.songList[index].title;
         var singer=this.songList[index].desp.split('|')[0];
         var audio={songUrl,imgUrl,title,singer}

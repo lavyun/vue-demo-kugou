@@ -9,7 +9,7 @@ const store=new Vuex.Store({
   state:{
     audio:{
       songUrl:'',
-      imgUrl:'../../static/default.png',
+      imgUrl:'http://m.kugou.com/v3/static/images/index/logo_kugou.png',
       title:'',
       singer:''
     },

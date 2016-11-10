@@ -1,6 +1,6 @@
 <template>
   <div class="audio-view" :class="{'audio_panel_hide':toggleHide}">
-    <audio :src="audio.songUrl"  class="" autoplay loop id="audioPlay"></audio>
+    <audio :src="audio.songUrl"  autoplay loop id="audioPlay"></audio>
     <div class="audio-panel-control" @click="togglePanel" :class="{'toggleContral':toggleHide}">
       <mt-spinner type="snake" :size="27" v-show="audioLoadding"></mt-spinner>
     </div>
@@ -46,6 +46,4 @@
     }
   }
 </script>
-<style scoped>
 
-</style>

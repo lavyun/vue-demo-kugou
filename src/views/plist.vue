@@ -40,7 +40,6 @@
           obj.location='/plist/info/'+list[i].querySelector('a').href.substr(30);
           this.plist.push(obj)
         }
-        console.log(this.plist)
       }
     }
   }

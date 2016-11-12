@@ -18,9 +18,6 @@
     created(){
       this.getList()
     },
-    //beforeRouteLeave(to,from,next){
-    //  console.log(to)
-    //},
     methods:{
       getList(){
         Indicator.open({

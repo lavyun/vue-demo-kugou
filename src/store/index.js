@@ -14,48 +14,36 @@ const store=new Vuex.Store({
       singer:''
     },
     audioLoadding:false,
-    headInfo:false,
-    headTitle:'',
-    headStyle:{'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'}
+    head:{
+      toggle:false,
+      title:'',
+      style:{'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'}
+
+    }
   },
   getters:{
     audio:state=>state.audio,
-    headInfo(state){
-      return state.headInfo
-    },
-    headTitle(state){
-      return state.headTitle
-    },
-    headStyle(state){
-      return state.headStyle;
-    },
+    head:state=>state.head,
     audioLoadding:state=>state.audioLoadding
   },
   mutations:{
     setAudio(state,audio){
       state.audio=audio;
     },
-    showPlayer(state){
-      state.audioFlag=true;
-    },
-    hidePlay(state){
-      state.audioFlag=false;
-    },
-    showHead(state){
-      state.headInfo=true;
+    showHead(state,title){
+      state.head.toggle=true;
     },
     setHeadTitle(state,title){
-      state.headTitle=title;
+      state.head.title=title;
     },
     hideHead(state){
-      state.headInfo=false;
-      state.headTitle=''
+      state.head.toggle=false;
     },
     setHeadStyle(state,style){
-      state.headStyle=style;
+      state.head.style=style;
     },
     resetHeadStyle:state=>{
-      state.headStyle={'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'};
+      state.head.style={'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'};
     },
     toggleAudioLoadding:state=>{
       state.audioLoadding=!state.audioLoadding;

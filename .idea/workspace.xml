@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="da6beba7-4026-4027-b5f6-7d62d2bdcd92" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/css/style.css" afterPath="$PROJECT_DIR$/src/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/player.vue" afterPath="$PROJECT_DIR$/src/components/player.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header/head.vue" afterPath="$PROJECT_DIR$/src/components/header/head.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ringtone.vue" afterPath="$PROJECT_DIR$/src/views/ringtone.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/plist.vue" afterPath="$PROJECT_DIR$/src/views/plist.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/plist_info.vue" afterPath="$PROJECT_DIR$/src/views/plist_info.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/rank.vue" afterPath="$PROJECT_DIR$/src/views/rank.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/rank_info.vue" afterPath="$PROJECT_DIR$/src/views/rank_info.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/singer_info.vue" afterPath="$PROJECT_DIR$/src/views/singer_info.vue" />
     </list>
     <ignored path="kugouM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +33,7 @@
       <file leaf-file-name="ringtone.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/ringtone.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.719298">
+            <state vertical-scroll-proportion="-15.052631">
               <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
               <folding>
                 <marker date="1478791301089" expanded="true" signature="414:1927" placeholder="{...}" />
@@ -49,68 +52,113 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plist_info.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/plist_info.vue">
+      <file leaf-file-name="search.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/search.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.017544">
-              <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.522673">
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
               <folding>
-                <marker date="1478788831906" expanded="true" signature="1034:3235" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1046:1196" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1061:1190" placeholder="{&quot;imgSrc&quot;: ''...}" />
-                <marker date="1478788831906" expanded="true" signature="1273:1458" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1292:1451" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1355:1423" placeholder="{&quot;text&quot;: '加载中...'...}" />
-                <marker date="1478788831906" expanded="true" signature="1494:1552" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1566:3231" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1579:1845" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1762:1836" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="1868:2562" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="2317:2554" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="2586:3158" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="2754:3149" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="3137:3149" placeholder="{...}" />
-                <marker date="1478788831906" expanded="true" signature="3178:3225" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1030:2975" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1042:1178" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1057:1172" placeholder="{&quot;keyword&quot;: ''...}" />
+                <marker date="1478788892407" expanded="true" signature="1193:1221" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1235:2971" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1252:1679" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1277:1353" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478788892407" expanded="true" signature="1518:1670" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1706:1779" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1795:2369" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="1852:1920" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478788892407" expanded="true" signature="2114:2360" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="2245:2320" placeholder="[...]" />
+                <marker date="1478788892407" expanded="true" signature="2393:2965" placeholder="{...}" />
+                <marker date="1478788892407" expanded="true" signature="2561:2956" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="singer.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/singer.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.142857">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state vertical-scroll-proportion="-9.122807">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
+      <file leaf-file-name="singer_info.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/singer_info.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87694144">
-              <caret line="55" column="103" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="player.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/player.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7017544">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state vertical-scroll-proportion="-10.438597">
+              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
               <folding>
-                <marker date="1478791301120" expanded="true" signature="907:1430" placeholder="{&quot;name&quot;: 'player'...}" />
-                <marker date="1478791301120" expanded="true" signature="938:1024" placeholder="{...}" />
-                <marker date="1478791301120" expanded="true" signature="953:1018" placeholder="{&quot;toggleHide&quot;: false...}" />
-                <marker date="1478791301120" expanded="true" signature="1039:1093" placeholder="{...}" />
-                <marker date="1478791301120" expanded="true" signature="1107:1426" placeholder="{...}" />
-                <marker date="1478791301120" expanded="true" signature="1128:1179" placeholder="{...}" />
-                <marker date="1478791301120" expanded="true" signature="1201:1420" placeholder="{...}" />
-                <marker date="1478791301120" expanded="true" signature="1231:1298" placeholder="{...}" />
-                <marker date="1478791301120" expanded="true" signature="1302:1368" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1037:3238" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1049:1199" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1064:1193" placeholder="{&quot;imgSrc&quot;: ''...}" />
+                <marker date="1478934351244" expanded="true" signature="1276:1366" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1295:1359" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1402:1460" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1474:3234" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1487:1848" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1512:1580" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478934351244" expanded="true" signature="1765:1839" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="1871:2565" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="2320:2557" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="2589:3161" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="2757:3152" placeholder="{...}" />
+                <marker date="1478934351244" expanded="true" signature="3181:3228" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singer_list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/singer_list.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.421053">
+              <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+              <folding>
+                <marker date="1478934303569" expanded="true" signature="289:1796" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="301:371" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="316:365" placeholder="{&quot;title&quot;: ''...}" />
+                <marker date="1478934303569" expanded="true" signature="407:566" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="424:559" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="602:704" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="718:1792" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="735:1102" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="760:828" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478934303569" expanded="true" signature="1017:1093" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="1125:1786" placeholder="{...}" />
+                <marker date="1478934303569" expanded="true" signature="1442:1778" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plist_info.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/plist_info.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.140351">
+              <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
+              <folding>
+                <marker date="1478934351225" expanded="true" signature="1034:3234" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1046:1196" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1061:1190" placeholder="{&quot;imgSrc&quot;: ''...}" />
+                <marker date="1478934351225" expanded="true" signature="1273:1363" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1292:1356" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1399:1457" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1471:3230" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1484:1844" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1509:1577" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478934351225" expanded="true" signature="1761:1835" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="1867:2561" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="2316:2553" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="2585:3157" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="2753:3148" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="3136:3148" placeholder="{...}" />
+                <marker date="1478934351225" expanded="true" signature="3177:3224" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -119,32 +167,29 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2142856">
-              <caret line="11" column="72" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
+            <state vertical-scroll-proportion="-11.428572">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/index.vue">
+      <file leaf-file-name="plist.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/plist.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.719298">
-              <caret line="74" column="47" selection-start-line="68" selection-start-column="10" selection-end-line="74" selection-end-column="47" />
+            <state vertical-scroll-proportion="-10.087719">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
-                <marker date="1478788654976" expanded="true" signature="782:2307" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="794:844" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="809:838" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="859:883" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="916:2303" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="930:940" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="953:1227" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="978:1046" placeholder="{&quot;text&quot;: '加载中...'...}" />
-                <marker date="1478788654976" expanded="true" signature="1171:1218" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="1250:1701" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="1429:1666" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="1725:2297" placeholder="{...}" />
-                <marker date="1478788654976" expanded="true" signature="1893:2288" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="342:1402" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="354:401" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="369:395" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="416:444" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="458:1398" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="475:787" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="500:568" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478933485711" expanded="true" signature="703:778" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="810:1392" placeholder="{...}" />
+                <marker date="1478933485711" expanded="true" signature="986:1384" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -153,50 +198,45 @@
       <file leaf-file-name="rank_info.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/rank_info.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.368421">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state vertical-scroll-proportion="-10.526316">
+              <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
               <folding>
-                <marker date="1478788943164" expanded="true" signature="1003:3111" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1015:1125" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1030:1119" placeholder="{&quot;imgSrc&quot;: ''...}" />
-                <marker date="1478788943164" expanded="true" signature="1202:1293" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1221:1286" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1329:1387" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1401:3107" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1414:1773" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1439:1507" placeholder="{&quot;text&quot;: '加载中...'...}" />
-                <marker date="1478788943164" expanded="true" signature="1690:1764" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="1796:2505" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="2260:2497" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="2529:3101" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="2697:3092" placeholder="{...}" />
-                <marker date="1478788943164" expanded="true" signature="3080:3092" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1003:3110" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1015:1125" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1030:1119" placeholder="{&quot;imgSrc&quot;: ''...}" />
+                <marker date="1478934351262" expanded="true" signature="1202:1292" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1221:1285" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1328:1386" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1400:3106" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1413:1772" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1438:1506" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478934351262" expanded="true" signature="1689:1763" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="1795:2504" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="2259:2496" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="2528:3100" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="2696:3091" placeholder="{...}" />
+                <marker date="1478934351262" expanded="true" signature="3079:3091" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <file leaf-file-name="rank.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/rank.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2142856">
-              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head_logo.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/header/head_logo.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.421053">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state vertical-scroll-proportion="-3.508772">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding>
-                <marker date="1478790049406" expanded="true" signature="450:614" placeholder="{&quot;name&quot;: 'head-logo'...}" />
-                <marker date="1478790049406" expanded="true" signature="484:515" placeholder="{...}" />
-                <marker date="1478790049406" expanded="true" signature="499:509" placeholder="{...}" />
-                <marker date="1478790049406" expanded="true" signature="529:610" placeholder="{...}" />
-                <marker date="1478790049406" expanded="true" signature="551:604" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="318:1300" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="330:380" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="345:374" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="395:423" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="437:1296" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="454:765" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="479:547" placeholder="{&quot;text&quot;: '加载中...'...}" />
+                <marker date="1478933929087" expanded="true" signature="680:756" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="788:1290" placeholder="{...}" />
+                <marker date="1478933929087" expanded="true" signature="964:1282" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -225,26 +265,26 @@
         <option value="$PROJECT_DIR$/src/components/header/head_nav.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/App.vue" />
-        <option value="$PROJECT_DIR$/src/views/plist.vue" />
-        <option value="$PROJECT_DIR$/src/views/rank.vue" />
         <option value="$PROJECT_DIR$/src/components/cellgroup.vue" />
         <option value="$PROJECT_DIR$/src/views/singer.vue" />
         <option value="$PROJECT_DIR$/src/components/header/rank-head.vue" />
-        <option value="$PROJECT_DIR$/src/components/header/head.vue" />
-        <option value="$PROJECT_DIR$/src/views/singer_list.vue" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/views/index.vue" />
-        <option value="$PROJECT_DIR$/src/views/plist_info.vue" />
         <option value="$PROJECT_DIR$/src/views/search.vue" />
-        <option value="$PROJECT_DIR$/src/views/singer_info.vue" />
-        <option value="$PROJECT_DIR$/src/views/rank_info.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/components/header/head_logo.vue" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/components/player.vue" />
         <option value="$PROJECT_DIR$/src/views/ringtone.vue" />
         <option value="$PROJECT_DIR$/src/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/src/views/plist.vue" />
+        <option value="$PROJECT_DIR$/src/components/header/head.vue" />
+        <option value="$PROJECT_DIR$/src/views/rank.vue" />
+        <option value="$PROJECT_DIR$/src/views/plist_info.vue" />
+        <option value="$PROJECT_DIR$/src/views/rank_info.vue" />
+        <option value="$PROJECT_DIR$/src/views/singer_list.vue" />
+        <option value="$PROJECT_DIR$/src/views/singer_info.vue" />
+        <option value="$PROJECT_DIR$/src/store/index.js" />
       </list>
     </option>
   </component>
@@ -292,7 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -475,7 +515,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -561,8 +601,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14519535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -817,125 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1052632">
           <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/rank.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.9122806">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-          <folding>
-            <marker date="1478601929499" expanded="true" signature="318:1371" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="330:380" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="345:374" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="395:423" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="429:495" placeholder="//..." />
-            <marker date="1478601929499" expanded="true" signature="508:1367" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="525:836" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="550:618" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478601929499" expanded="true" signature="751:827" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="859:1361" placeholder="{...}" />
-            <marker date="1478601929499" expanded="true" signature="1035:1353" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/search.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.877193">
-          <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
-          <folding>
-            <marker date="1478788892407" expanded="true" signature="1030:2975" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1042:1178" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1057:1172" placeholder="{&quot;keyword&quot;: ''...}" />
-            <marker date="1478788892407" expanded="true" signature="1193:1221" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1235:2971" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1252:1679" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1277:1353" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478788892407" expanded="true" signature="1518:1670" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1706:1779" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1795:2369" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="1852:1920" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478788892407" expanded="true" signature="2114:2360" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="2245:2320" placeholder="[...]" />
-            <marker date="1478788892407" expanded="true" signature="2393:2965" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="2561:2956" placeholder="{...}" />
-            <marker date="1478788892407" expanded="true" signature="2944:2956" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/singer.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.122807">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/singer_info.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.473684">
-          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
-          <folding>
-            <marker date="1478788892376" expanded="true" signature="1037:3240" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1049:1199" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1064:1193" placeholder="{&quot;imgSrc&quot;: ''...}" />
-            <marker date="1478788892376" expanded="true" signature="1276:1461" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1295:1454" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1358:1426" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478788892376" expanded="true" signature="1497:1555" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1569:3236" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1582:1850" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1766:1841" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="1873:2567" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="2322:2559" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="2591:3163" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="2759:3154" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="3142:3154" placeholder="{...}" />
-            <marker date="1478788892376" expanded="true" signature="3183:3230" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/singer_list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3508772">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <marker date="1478661342968" expanded="true" signature="289:1796" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="301:371" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="316:365" placeholder="{&quot;title&quot;: ''...}" />
-            <marker date="1478661342968" expanded="true" signature="407:566" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="424:559" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="602:704" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="718:1792" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="735:1102" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="760:828" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478661342968" expanded="true" signature="1017:1093" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="1125:1786" placeholder="{...}" />
-            <marker date="1478661342968" expanded="true" signature="1442:1778" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/plist.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.614035">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding>
-            <marker date="1478601872211" expanded="true" signature="342:1434" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="354:401" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="369:395" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="416:444" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="458:1430" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="475:787" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="500:568" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478601872211" expanded="true" signature="703:778" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="810:1424" placeholder="{...}" />
-            <marker date="1478601872211" expanded="true" signature="986:1384" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,30 +864,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.754386">
           <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <marker date="1478349615500" expanded="true" signature="475:586" placeholder="{&quot;name&quot;: 'app'...}" />
-            <marker date="1478349615500" expanded="true" signature="506:528" placeholder="{...}" />
-            <marker date="1478349615500" expanded="true" signature="531:584" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/head.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.368421">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding>
-            <marker date="1478661157917" expanded="true" signature="382:572" placeholder="{&quot;name&quot;: 'k-head'...}" />
-            <marker date="1478661157917" expanded="true" signature="394:425" placeholder="{...}" />
-            <marker date="1478661157917" expanded="true" signature="409:419" placeholder="{...}" />
-            <marker date="1478661157917" expanded="true" signature="440:505" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/header/head_logo.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.421053">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding>
             <marker date="1478790049406" expanded="true" signature="450:614" placeholder="{&quot;name&quot;: 'head-logo'...}" />
@@ -978,10 +881,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/player.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding>
+            <marker date="1478791301120" expanded="true" signature="907:1430" placeholder="{&quot;name&quot;: 'player'...}" />
+            <marker date="1478791301120" expanded="true" signature="938:1024" placeholder="{...}" />
+            <marker date="1478791301120" expanded="true" signature="953:1018" placeholder="{&quot;toggleHide&quot;: false...}" />
+            <marker date="1478791301120" expanded="true" signature="1039:1093" placeholder="{...}" />
+            <marker date="1478791301120" expanded="true" signature="1107:1426" placeholder="{...}" />
+            <marker date="1478791301120" expanded="true" signature="1128:1179" placeholder="{...}" />
+            <marker date="1478791301120" expanded="true" signature="1201:1420" placeholder="{...}" />
+            <marker date="1478791301120" expanded="true" signature="1231:1298" placeholder="{...}" />
+            <marker date="1478791301120" expanded="true" signature="1302:1368" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.596491">
+          <caret line="55" column="103" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.719298">
-          <caret line="74" column="47" selection-start-line="68" selection-start-column="10" selection-end-line="74" selection-end-column="47" />
+        <state vertical-scroll-proportion="-14.0">
+          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
           <folding>
             <marker date="1478788654976" expanded="true" signature="782:2307" placeholder="{...}" />
             <marker date="1478788654976" expanded="true" signature="794:844" placeholder="{...}" />
@@ -1000,100 +945,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/header/head.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2142856">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/rank_info.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.368421">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state vertical-scroll-proportion="-1.0526316">
+          <caret line="3" column="73" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="73" />
           <folding>
-            <marker date="1478788943164" expanded="true" signature="1003:3111" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1015:1125" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1030:1119" placeholder="{&quot;imgSrc&quot;: ''...}" />
-            <marker date="1478788943164" expanded="true" signature="1202:1293" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1221:1286" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1329:1387" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1401:3107" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1414:1773" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1439:1507" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478788943164" expanded="true" signature="1690:1764" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="1796:2505" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="2260:2497" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="2529:3101" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="2697:3092" placeholder="{...}" />
-            <marker date="1478788943164" expanded="true" signature="3080:3092" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.142857">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2142856">
-          <caret line="11" column="72" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/player.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7017544">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding>
-            <marker date="1478791301120" expanded="true" signature="907:1430" placeholder="{&quot;name&quot;: 'player'...}" />
-            <marker date="1478791301120" expanded="true" signature="938:1024" placeholder="{...}" />
-            <marker date="1478791301120" expanded="true" signature="953:1018" placeholder="{&quot;toggleHide&quot;: false...}" />
-            <marker date="1478791301120" expanded="true" signature="1039:1093" placeholder="{...}" />
-            <marker date="1478791301120" expanded="true" signature="1107:1426" placeholder="{...}" />
-            <marker date="1478791301120" expanded="true" signature="1128:1179" placeholder="{...}" />
-            <marker date="1478791301120" expanded="true" signature="1201:1420" placeholder="{...}" />
-            <marker date="1478791301120" expanded="true" signature="1231:1298" placeholder="{...}" />
-            <marker date="1478791301120" expanded="true" signature="1302:1368" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/plist_info.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.017544">
-          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
-          <folding>
-            <marker date="1478788831906" expanded="true" signature="1034:3235" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1046:1196" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1061:1190" placeholder="{&quot;imgSrc&quot;: ''...}" />
-            <marker date="1478788831906" expanded="true" signature="1273:1458" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1292:1451" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1355:1423" placeholder="{&quot;text&quot;: '加载中...'...}" />
-            <marker date="1478788831906" expanded="true" signature="1494:1552" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1566:3231" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1579:1845" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1762:1836" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="1868:2562" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="2317:2554" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="2586:3158" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="2754:3149" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="3137:3149" placeholder="{...}" />
-            <marker date="1478788831906" expanded="true" signature="3178:3225" placeholder="{...}" />
+            <marker date="1478933653958" expanded="true" signature="387:549" placeholder="{&quot;name&quot;: 'k-head'...}" />
+            <marker date="1478933653958" expanded="true" signature="399:430" placeholder="{...}" />
+            <marker date="1478933653958" expanded="true" signature="414:424" placeholder="{...}" />
+            <marker date="1478933653958" expanded="true" signature="445:482" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/ringtone.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.719298">
+        <state vertical-scroll-proportion="-15.052631">
           <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
           <folding>
             <marker date="1478791301089" expanded="true" signature="414:1927" placeholder="{...}" />
@@ -1111,11 +978,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/views/singer.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87694144">
-          <caret line="55" column="103" selection-start-line="55" selection-start-column="103" selection-end-line="55" selection-end-column="103" />
+        <state vertical-scroll-proportion="-9.122807">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/plist.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.087719">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <marker date="1478933485711" expanded="true" signature="342:1402" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="354:401" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="369:395" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="416:444" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="458:1398" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="475:787" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="500:568" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478933485711" expanded="true" signature="703:778" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="810:1392" placeholder="{...}" />
+            <marker date="1478933485711" expanded="true" signature="986:1384" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/singer_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.421053">
+          <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+          <folding>
+            <marker date="1478934303569" expanded="true" signature="289:1796" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="301:371" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="316:365" placeholder="{&quot;title&quot;: ''...}" />
+            <marker date="1478934303569" expanded="true" signature="407:566" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="424:559" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="602:704" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="718:1792" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="735:1102" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="760:828" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478934303569" expanded="true" signature="1017:1093" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="1125:1786" placeholder="{...}" />
+            <marker date="1478934303569" expanded="true" signature="1442:1778" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/singer_info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.438597">
+          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding>
+            <marker date="1478934351244" expanded="true" signature="1037:3238" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1049:1199" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1064:1193" placeholder="{&quot;imgSrc&quot;: ''...}" />
+            <marker date="1478934351244" expanded="true" signature="1276:1366" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1295:1359" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1402:1460" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1474:3234" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1487:1848" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1512:1580" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478934351244" expanded="true" signature="1765:1839" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="1871:2565" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="2320:2557" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="2589:3161" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="2757:3152" placeholder="{...}" />
+            <marker date="1478934351244" expanded="true" signature="3181:3228" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/rank.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.508772">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <marker date="1478933929087" expanded="true" signature="318:1300" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="330:380" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="345:374" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="395:423" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="437:1296" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="454:765" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="479:547" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478933929087" expanded="true" signature="680:756" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="788:1290" placeholder="{...}" />
+            <marker date="1478933929087" expanded="true" signature="964:1282" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/plist_info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.140351">
+          <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
+          <folding>
+            <marker date="1478934351225" expanded="true" signature="1034:3234" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1046:1196" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1061:1190" placeholder="{&quot;imgSrc&quot;: ''...}" />
+            <marker date="1478934351225" expanded="true" signature="1273:1363" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1292:1356" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1399:1457" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1471:3230" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1484:1844" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1509:1577" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478934351225" expanded="true" signature="1761:1835" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="1867:2561" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="2316:2553" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="2585:3157" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="2753:3148" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="3136:3148" placeholder="{...}" />
+            <marker date="1478934351225" expanded="true" signature="3177:3224" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/rank_info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.526316">
+          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+          <folding>
+            <marker date="1478934351262" expanded="true" signature="1003:3110" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1015:1125" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1030:1119" placeholder="{&quot;imgSrc&quot;: ''...}" />
+            <marker date="1478934351262" expanded="true" signature="1202:1292" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1221:1285" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1328:1386" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1400:3106" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1413:1772" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1438:1506" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478934351262" expanded="true" signature="1689:1763" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="1795:2504" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="2259:2496" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="2528:3100" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="2696:3091" placeholder="{...}" />
+            <marker date="1478934351262" expanded="true" signature="3079:3091" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.428572">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/search.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.522673">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <marker date="1478788892407" expanded="true" signature="1030:2975" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1042:1178" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1057:1172" placeholder="{&quot;keyword&quot;: ''...}" />
+            <marker date="1478788892407" expanded="true" signature="1193:1221" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1235:2971" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1252:1679" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1277:1353" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478788892407" expanded="true" signature="1518:1670" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1706:1779" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1795:2369" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="1852:1920" placeholder="{&quot;text&quot;: '加载中...'...}" />
+            <marker date="1478788892407" expanded="true" signature="2114:2360" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="2245:2320" placeholder="[...]" />
+            <marker date="1478788892407" expanded="true" signature="2393:2965" placeholder="{...}" />
+            <marker date="1478788892407" expanded="true" signature="2561:2956" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -35,11 +35,7 @@
     //通过路由的before钩子解除router-view缓存限制
     beforeRouteEnter (to, from, next) {
       next(vm => {
-        vm.$store.commit('showHead');
-        Indicator.open({
-          text: '加载中...',
-          spinnerType: 'snake'
-        });
+        vm.$store.commit('showHead')
         vm.get();
       })
     },
@@ -49,6 +45,10 @@
     },
     methods:{
       get(){
+        Indicator.open({
+          text: '加载中...',
+          spinnerType: 'snake'
+        });
         var infoID=this.$route.params.id;
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/plist/list/&url2='+infoID).then((res)=>{
           Indicator.close()

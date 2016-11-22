@@ -13,11 +13,12 @@ const store=new Vuex.Store({
       title:'',
       singer:''
     },
+    headNav:'head-nav1',
     audioLoadding:false,
     head:{
       toggle:false,
       title:'',
-      style:{'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'}
+      style:{'background':'rgba(43,162,251,0)'}
 
     }
   },
@@ -25,6 +26,7 @@ const store=new Vuex.Store({
     audio:state=>state.audio,
     head:state=>state.head,
     audioLoadding:state=>state.audioLoadding
+    //selected:state=>state.selected
   },
   mutations:{
     setAudio(state,audio){
@@ -43,10 +45,13 @@ const store=new Vuex.Store({
       state.head.style=style;
     },
     resetHeadStyle:state=>{
-      state.head.style={'background':'-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0))'};
+      state.head.style={'background':'rgba(43,162,251,0)'};
     },
     toggleAudioLoadding:state=>{
       state.audioLoadding=!state.audioLoadding;
+    },
+    setHeadNav:(state,index)=>{
+      state.headNav='head-nav'+index;
     }
   }
 })

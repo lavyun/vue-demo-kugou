@@ -1,5 +1,5 @@
 <template>
-  <div class="rank-head container" :style="style">
+  <div class="rank-head container" :style="style" id="transparent-header">
     <a class="rank-head-back" @click="routerBack"></a>
     {{title}}
   </div>

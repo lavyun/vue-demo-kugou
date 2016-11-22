@@ -28,7 +28,8 @@
         songList:[],
         updateTime:'',
         desp:'',
-        hideDesp:true
+        hideDesp:true,
+        opacity:0
       }
     },
     //通过路由的before钩子解除router-view缓存限制
@@ -36,10 +37,15 @@
       next(vm => {
         vm.$store.commit('showHead')
         vm.get();
+        window.onscroll=()=>{
+          vm.opacity=window.pageYOffset/250;
+          vm.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+vm.opacity+')'})
+        }
       })
     },
     beforeRouteLeave(to,from,next){
       this.$store.commit('hideHead');
+      window.onscroll=null;
       next()
     },
     methods:{

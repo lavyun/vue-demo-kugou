@@ -1,37 +1,41 @@
 <template>
-  <div>
-
-      <mt-navbar v-model="selected" class="container"  @click.native="goRouter">
-        <mt-tab-item id="head-nav1">新歌</mt-tab-item>
-        <mt-tab-item id="head-nav2">排行</mt-tab-item>
-        <mt-tab-item id="head-nav3">歌单</mt-tab-item>
-        <mt-tab-item id="head-nav4">歌手</mt-tab-item>
-        <mt-tab-item id="head-nav5">彩铃</mt-tab-item>
+  <div class="header-nav">
+      <mt-navbar v-model="headNav" class="container" >
+        <mt-tab-item id="head-nav1" @click.native="goRouter(1)">新歌</mt-tab-item>
+        <mt-tab-item id="head-nav2" @click.native="goRouter(2)">排行</mt-tab-item>
+        <mt-tab-item id="head-nav3" @click.native="goRouter(3)">歌单</mt-tab-item>
+        <mt-tab-item id="head-nav4" @click.native="goRouter(4)">歌手</mt-tab-item>
+        <mt-tab-item id="head-nav5" @click.native="goRouter(5)">彩铃</mt-tab-item>
       </mt-navbar>
-
   </div>
 </template>
 
 <script type="es6">
   import { Navbar, TabItem } from 'mint-ui';
-
+  import{ mapState } from 'vuex'
   export default {
     name:'head-nav',
     data(){
       return {
-        selected:'head-nav1'
+        //selected:'head-nav1'
       }
     },
     components:{Navbar, TabItem},
+    computed:{
+      ...mapState(['headNav'])
+    },
     methods:{
-      goRouter(){
-        var navItem=this.selected.charAt(this.selected.length-1);
-        switch(navItem){
-          case '1':this.$router.push({path:'index'});break;
-          case '2':this.$router.push({path:'rank'});break;
-          case '3':this.$router.push({path:'plist'});break;
-          case '4':this.$router.push({path:'singer'});break;
-          case '5':this.$router.push({path:'ringtone'});break;
+      goRouter(index){
+        //console.log(this.selected)
+        this.$store.commit('setHeadNav',index);
+        //var navItem=this.selected.charAt(this.selected.length-1);
+        //console.log(navItem)
+        switch(index){
+          case 1:this.$router.push({path:'index'});break;
+          case 2:this.$router.push({path:'rank'});break;
+          case 3:this.$router.push({path:'plist'});break;
+          case 4:this.$router.push({path:'singer'});break;
+          case 5:this.$router.push({path:'ringtone'});break;
         }
       }
     }

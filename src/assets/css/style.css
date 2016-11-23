@@ -9,7 +9,7 @@ a{text-decoration: none !important;}
 .head-download a{display: block;height: 100%;width: 100%;border: 1px solid #fff;text-align: center;color: #fff;border-radius: 5px;}
 .head-search{float: right;height: 31px;padding: 3px 0}
 .head-search img{height: 100%}
-.header-nav{border-bottom: 5px solid #f4f4f4}
+.header-nav{border-bottom: 3px solid #f4f4f4}
 .main{margin-top: 94px;}
 .search-panel{padding: 10px;background-color: #fbfbfb;height: 55px;}
 .search-input{width: 80%;height: 100%;display: block;border: 1px solid #e5e5e5;border-radius: 7px;float: left;background-color: #fff}

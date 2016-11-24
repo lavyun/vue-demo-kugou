@@ -26,23 +26,29 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/crbt/index&url2=').then(res=>{
-          Indicator.close()
+        //this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/crbt/index&url2=').then(res=>{
+        this.$http.get('/static/jsons/rings.json').then(res=>{
           this.parseList(res.data);
         })
       },
       parseList(data){
-        var div=document.createElement('div');
-        div.innerHTML=data;
-        var list=div.querySelectorAll('.panel-songslist-item');
-        for(var i=0;i<list.length;i++){
-          var obj={};
-          obj.title=list[i].querySelector('.rings-name').innerText;
-          obj.desp=list[i].querySelector('.rings-sub').innerText.split("|").join(" | ");
-          obj.songUrl=list[i].querySelector('.ring-btn-play').getAttribute('data-songurl');
-          obj.orderUrl=list[i].querySelector('.order-ring').href;
-          this.songList.push(obj);
-        }
+        setTimeout(()=>{
+          Indicator.close()
+          this.songList=data;
+        },1000)
+
+        //var div=document.createElement('div');
+        //div.innerHTML=data;
+        //var list=div.querySelectorAll('.panel-songslist-item');
+        //for(var i=0;i<list.length;i++){
+        //  var obj={};
+        //  obj.title=list[i].querySelector('.rings-name').innerText;
+        //  obj.desp=list[i].querySelector('.rings-sub').innerText.split("|").join(" | ");
+        //  obj.songUrl=list[i].querySelector('.ring-btn-play').getAttribute('data-songurl');
+        //  obj.orderUrl=list[i].querySelector('.order-ring').href;
+        //  this.songList.push(obj);
+        //}
+        //console.log(JSON.stringify(this.songList))
       },
       playAudio(index){
         this.$store.commit("toggleAudioLoadding");

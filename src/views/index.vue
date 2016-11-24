@@ -46,30 +46,34 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com&url2=').then((res) => {
+        //this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com&url2=').then((res) => {
+        this.$http.get('/static/jsons/index.json').then((res) => {
           this.parseData(res.data);
         })
       },
       parseData(data){
-        var div=document.createElement('div');
-        div.innerHTML=data;
-        var list=div.querySelectorAll('.panel-songslist-item');
-        for(var i=0;i<list.length;i++){
-          var song={};
-          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
-          var hash=list[i].id.substr(6);
-          song.title=title;song.hash=hash;
-          this.songList.push(song)
-        }
-        Indicator.close();
+        setTimeout(()=>{
+          Indicator.close()
+          this.songList=data;
+        },1000)
+        //var div=document.createElement('div');
+        //div.innerHTML=data;
+        //var list=div.querySelectorAll('.panel-songslist-item');
+        //for(var i=0;i<list.length;i++){
+        //  var song={};
+        //  song.title=list[i].querySelector('.panel-songs-item-name span').innerText;
+        //  song.hash=list[i].id.substr(6);
+        //  this.songList.push(song)
+        //}
       },
       playAudio(index){
         this.$store.commit("toggleAudioLoadding");
         this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
-          var songUrl=JSON.parse(res.data).url;
-          var imgUrl=JSON.parse(res.data).imgUrl.split('{size}').join('100');
-          var title=JSON.parse(res.data).songName;
-          var singer=JSON.parse(res.data).choricSinger;
+          var json_obj=JSON.parse(res.data);
+          var songUrl=json_obj.url;
+          var imgUrl=json_obj.imgUrl.split('{size}').join('100');
+          var title=json_obj.songName;
+          var singer=json_obj.choricSinger;
           var audio={songUrl,imgUrl,title,singer}
           this.$store.commit("toggleAudioLoadding");
           this.$store.commit('setAudio',audio);

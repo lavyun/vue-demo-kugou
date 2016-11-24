@@ -27,6 +27,7 @@
 
 <script type="es6">
   import { Swipe, SwipeItem,Indicator,Cell } from 'mint-ui';
+  import list_index from '../jsons/list_index'
   export default{
     data(){
       return {
@@ -46,10 +47,10 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        //this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com&url2=').then((res) => {
-        this.$http.get('/static/jsons/index.json').then((res) => {
-          this.parseData(res.data);
-        })
+        //this.$http.get('http://cs003.m2828.com/jsons/index.json').then((res) => {
+        //this.$http.get('../jsons/plist.json').then((res) => {
+          this.parseData(list_index);
+        //})
       },
       parseData(data){
         setTimeout(()=>{

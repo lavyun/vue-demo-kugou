@@ -9,6 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "json-loader": "^0.5.4",
     "vue": "^2.0.1"
   },
   "devDependencies": {

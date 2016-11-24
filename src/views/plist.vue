@@ -8,6 +8,7 @@
 
 <script type="es6">
   import { Cell,Indicator } from 'mint-ui'
+  import list_plist from '../jsons/list_plist'
   export default {
     data(){
       return {
@@ -24,9 +25,9 @@
           spinnerType: 'snake'
         });
         //this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/plist/index&url2=').then((res)=>{
-        this.$http.get('/static/jsons/plist.json').then((res)=>{
-          this.parseList(res.data)
-        })
+        //this.$http.get('./static/jsons/plist.json').then((res)=>{
+          this.parseList(list_plist)
+        //})
       },
       parseList(data){
         setTimeout(()=>{

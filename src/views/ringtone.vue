@@ -11,6 +11,7 @@
 
 <script type="es6">
   import {Cell,Indicator} from 'mint-ui'
+  import list_rings from '../jsons/list_rings'
   export default {
     data(){
       return {
@@ -27,9 +28,9 @@
           spinnerType: 'snake'
         });
         //this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/crbt/index&url2=').then(res=>{
-        this.$http.get('/static/jsons/rings.json').then(res=>{
-          this.parseList(res.data);
-        })
+        //this.$http.get('../jsons/plist.json').then(res=>{
+          this.parseList(list_rings);
+        //})
       },
       parseList(data){
         setTimeout(()=>{

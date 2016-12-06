@@ -10,8 +10,7 @@ vuejs仿写酷狗音乐webapp
 > 2016/11/10：修改播放器样式，增加播放音乐时的loading状态<br>
 > 2016/11/09：完成所有view级别组件<br>
 
-[在线演示(模拟数据)][5]<br>
-[在线演示(请求数据)][1]<br>
+[在线演示][1]<br>
 [原站地址][2]
 
 主要技术栈：
@@ -44,4 +43,3 @@ vuejs仿写酷狗音乐webapp
   [2]: http://m.kugou.com
   [3]: http://cs003.m2828.com
   [4]: http://weibo.com/u/5921186675
-  [5]: http://cs003.m2828.com/demo/kugouApp1/

@@ -57,25 +57,44 @@
         var infoID=this.$route.params.id;
         this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/singer/info/&url2='+infoID).then((res)=>{
           Indicator.close()
+          console.log(res.data)
           this.parseList(res.data)
+
         })
       },
       parseList(data){
         var div=document.createElement('div');
         div.innerHTML=data;
-        this.imgSrc=div.querySelector('#imgBoxInfo img').src;
-        this.title=div.querySelector('.page-title').innerText;
-        this.desp=div.querySelector('#introBox p').innerText;
-        this.$store.commit('setHeadTitle',this.title);
-        var list=div.querySelectorAll('.panel-songslist-item');
-        this.songList = [];
-        for(var i=0;i<list.length;i++){
-          var song={};
-          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
-          var hash=list[i].id.substr(6);
-          song.title=title;song.hash=hash;
-          this.songList.push(song)
+        if(div.querySelector('#imgBoxInfo')){
+          this.imgSrc=div.querySelector('#imgBoxInfo img').src;
+          this.title=div.querySelector('.page-title').innerText;
+          this.desp=div.querySelector('#introBox p').innerText;
+          this.songList = [];
+          var list=div.querySelectorAll('.panel-songslist-item');
+          for(let i=0;i<list.length;i++){
+            var song={};
+            song.title=list[i].querySelector('.panel-songs-item-name span').innerText;
+            song.hash=list[i].id.substr(6);
+            this.songList.push(song)
+          }
+        }else{
+          var imgSrc_A=div.querySelector('.sng_ins_1 .top img').getAttribute("_src").split('/120');
+          this.imgSrc=imgSrc_A[0]+'/480'+imgSrc_A[1];
+          this.title=div.querySelector('.sng_ins_1 .top .intro .clear_fix').innerText;
+          this.desp=div.querySelector('#text .bordr_cen').innerText;
+          this.songList = [];
+          var list=div.querySelectorAll('#song_container li');
+          for(let i=0;i<list.length;i++){
+            var song={};
+            var song_info=list[i].querySelector('.song_hid').value.split("|");
+            song.title=song_info[0]
+            song.hash=song_info[1];
+            this.songList.push(song)
+          }
         }
+        this.$store.commit('setHeadTitle',this.title);
+
+
       },
       playAudio(index){
         this.$store.commit("toggleAudioLoadding");

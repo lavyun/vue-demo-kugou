@@ -22,9 +22,9 @@
     },
     methods:{
       searchRouter(){
+        this.$store.commit('hideDetailPlayer')
         this.$router.push({path:'/search'})
       }
     }
   }
-
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <headLogo></headLogo>
-    <rank-head v-if="head.toggle" :title="head.title"  :style="head.style"></rank-head>
+    <rank-head v-if="head.toggle" :title="head.title" :style="head.style"></rank-head>
     <head-nav v-else></head-nav>
 
   </div>
@@ -14,14 +14,12 @@
   import { mapGetters } from 'vuex'
   export default {
     data(){
-      return {
-
-      }
+      return {}
     },
-    computed:{
+    computed: {
       ...mapGetters(['head'])
     },
-    name:'k-head',
-    components:{headLogo,headNav,rankHead}
+    name: 'k-head',
+    components: {headLogo, headNav, rankHead}
   }
 </script>

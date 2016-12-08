@@ -6,14 +6,14 @@
 
     <div class="plist-desp container">
       <p class="plist-desp-p" :class="{'plist-desp-hide': hideDesp }">{{desp}}</p>
-      <img src="../../static/close_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
-      <img src="../../static/open_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-else>
+      <img src="../assets/images/close_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
+      <img src="../assets/images/open_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-else>
     </div>
     <div class="plist-desp-bottom" style="width: 100%;height: 5px;background-color: #f1f1f1"></div>
 
     <div class="rank-info-list">
       <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
-        <img src="../../static/download_icon.png" alt="" width="20" height="20">
+        <img src="../assets/images/download_icon.png" alt="" width="20" height="20">
       </mt-cell>
     </div>
   </div>

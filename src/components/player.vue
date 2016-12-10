@@ -1,12 +1,12 @@
 <template>
   <div class="audio-view" :class="{'audio_panel_hide':toggleHide}">
-    <audio :src="audio.songUrl"  autoplay loop id="audioPlay"></audio>
+    <audio :src="audio.songUrl"  autoplay loop id="audioPlay" @timeupdate="change()"></audio>
     <div class="audio-panel-control" @click="togglePanel" :class="{'toggleContral':toggleHide}">
       <mt-spinner type="snake" :size="27" v-show="audioLoadding"></mt-spinner>
     </div>
-    <div class="audio-panel" @click="showDetailPlayer()">
-      <img alt="" class="player-img" :src="audio.imgUrl">
-      <div class="player-status">
+    <div class="audio-panel">
+      <img alt="" class="player-img" :src="audio.imgUrl" @click="showDetailPlayer()">
+      <div class="player-status" @click="showDetailPlayer()">
         <p class="player-title ellipsis">{{audio.title}}</p>
         <p class="player-singer ellipsis">{{audio.singer}}</p>
       </div>
@@ -31,7 +31,7 @@
       }
     },
     computed:{
-      ...mapGetters(['audio','audioLoadding'])
+      ...mapGetters(['audio','audioLoadding','showPlayer'])
     },
     methods:{
       togglePanel(){
@@ -46,7 +46,18 @@
         this.toggleStatu=!this.toggleStatu;
       },
       showDetailPlayer(){
-        this.$store.commit('showDetailPlayer')
+        if(this.showPlayer){
+          this.$store.commit('showDetailPlayer',true);
+        }
+      },
+      change(){
+        var time=document.getElementById('audioPlay').currentTime
+        if(this.audio.currentFlag){
+          document.getElementById('audioPlay').currentTime=this.audio.currentLength;
+          this.$store.commit('setCurrent',false);
+        }else{
+          this.$store.commit('setAudioTime',time);
+        }
       }
     }
   }

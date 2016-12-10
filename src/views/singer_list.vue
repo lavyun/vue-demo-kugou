@@ -17,13 +17,13 @@
     },
     beforeRouteEnter(to,from,next){
       next(vm=>{
-        vm.$store.commit('showHead');
+        vm.$store.commit('showHead',true);
         vm.$store.commit('setHeadStyle',{'background':'#2CA2F9'})
         vm.getList();
       })
     },
     beforeRouteLeave(to,from,next){
-      this.$store.commit('hideHead');
+      this.$store.commit('showHead',false);
       this.$store.commit('resetHeadStyle')
       next();
     },

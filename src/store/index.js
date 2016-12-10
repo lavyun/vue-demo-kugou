@@ -11,7 +11,10 @@ const store = new Vuex.Store({
       songUrl: '',
       imgUrl: 'http://m.kugou.com/v3/static/images/index/logo_kugou.png',
       title: '',
-      singer: ''
+      singer: '',
+      currentLength: 0,
+      songLength: 0,
+      currentFlag: false
     },
     head: {
       toggle: false,
@@ -20,26 +23,36 @@ const store = new Vuex.Store({
     },
     headNav: 'head-nav1',
     audioLoadding: false,
-    detailPlayerFlag: false
+    detailPlayerFlag: false,
+    showPlayer: false,
+    listenCount:0
   },
   getters: {
     audio: state=>state.audio,
     head: state=>state.head,
     audioLoadding: state=>state.audioLoadding,
-    detailPlayerFlag: state=>state.detailPlayerFlag
+    detailPlayerFlag: state=>state.detailPlayerFlag,
+    showPlayer: state=>state.showPlayer
   },
   mutations: {
     setAudio(state, audio){
+      if(!state.listenCount){
+        state.showPlayer=true;  //首次进入应用时不可打开播放详情
+      }
+      state.listenCount++;
       state.audio = audio;
     },
-    showHead(state, title){
-      state.head.toggle = true;
+    setAudioTime(state, time){
+      state.audio.currentLength = time;
+    },
+    setCurrent(state, flag){
+      state.audio.currentFlag = flag;
+    },
+    showHead(state, flag){
+      state.head.toggle = flag;
     },
     setHeadTitle(state, title){
       state.head.title = title;
-    },
-    hideHead(state){
-      state.head.toggle = false;
     },
     setHeadStyle(state, style){
       state.head.style = style;
@@ -53,11 +66,11 @@ const store = new Vuex.Store({
     setHeadNav: (state, index)=> {
       state.headNav = 'head-nav' + index;
     },
-    showDetailPlayer: state=> {
-      state.detailPlayerFlag = true;
+    showDetailPlayer: (state,flag)=> {
+      state.detailPlayerFlag = flag;
     },
-    hideDetailPlayer: state=> {
-      state.detailPlayerFlag = false;
+    showPlayer: (state, flag)=> {
+      state.showPlayer = flag;
     }
   }
 });

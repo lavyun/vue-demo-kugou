@@ -35,7 +35,7 @@
     //通过路由的before钩子解除router-view缓存限制
     beforeRouteEnter (to, from, next) {
       next(vm => {
-        vm.$store.commit('showHead')
+        vm.$store.commit('showHead',true)
         vm.get();
         window.onscroll=()=>{
           vm.opacity=window.pageYOffset/250;
@@ -44,7 +44,7 @@
       })
     },
     beforeRouteLeave(to,from,next){
-      this.$store.commit('hideHead');
+      this.$store.commit('showHead',false);
       window.onscroll=null;
       next()
     },

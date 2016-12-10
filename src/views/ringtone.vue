@@ -18,6 +18,15 @@
         songList:[]
       }
     },
+    beforeRouteEnter(to,from,next){
+      next(vm=>{
+        vm.$store.commit('showPlayer',false);
+      });
+    },
+    beforeRouteLeave(to,from,next){
+      this.$store.commit('showPlayer',true);
+      next();
+    },
     created(){
       this.getList();
     },

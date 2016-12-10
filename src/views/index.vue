@@ -70,7 +70,9 @@
               imgUrl = json_obj.imgUrl.split('{size}').join('100'),
               title = json_obj.songName,
               singer = json_obj.choricSinger,
-              audio = {songUrl, imgUrl, title, singer};
+              songLength=json_obj.timeLength,
+              currentLength= 0,
+              audio = {songUrl, imgUrl, title, singer,songLength,currentLength};
           this.$store.commit("toggleAudioLoadding");
           this.$store.commit('setAudio', audio);
         })

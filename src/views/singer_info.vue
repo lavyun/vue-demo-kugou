@@ -93,20 +93,11 @@
           }
         }
         this.$store.commit('setHeadTitle',this.title);
-
-
       },
       playAudio(index){
-        this.$store.commit("toggleAudioLoadding");
-        this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
-          var songUrl=JSON.parse(res.data).url;
-          var imgUrl=JSON.parse(res.data).imgUrl.split('{size}').join('100');
-          var title=JSON.parse(res.data).songName;
-          var singer=JSON.parse(res.data).choricSinger;
-          var audio={songUrl,imgUrl,title,singer}
-          this.$store.commit("toggleAudioLoadding");
-          this.$store.commit('setAudio',audio);
-        })
+        var hash=this.songList[index].hash;
+        this.$store.dispatch('getSong',hash);
+        this.$store.dispatch('getLrc',hash);
       },
       toggleDesp(){
         this.hideDesp=!this.hideDesp;

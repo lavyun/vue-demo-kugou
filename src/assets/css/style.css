@@ -70,4 +70,17 @@ a{text-decoration: none !important;}
 .mt-range{width: 80%;padding: 0 10px;overflow: hidden}
 .mt-range--disabled{opacity: 1}
 .mt-range-content{margin-right: 7px;width: 100%;}
+.player-padding{padding: 0 20%}
+.detail_player-control{margin-top: 10px;}
+.detail_player-btn{display: block;width: 33.3%;float: left;height: 100px;}
+.play-prev{background: url("../images/play_prev.png") no-repeat;background-size: 60% auto;background-position: center}
+.play-play{background: url("../images/play_play.png") no-repeat;background-size: 80% auto;background-position: center}
+.play-pause{background: url("../images/play_pause.png") no-repeat;background-size: 80% auto;background-position: center}
+.play-next{background: url("../images/play_next.png") no-repeat;background-size: 60% auto;background-position: center}
+
+
+/* media query */
+@media screen and (max-width: 320px){
+  .detail_player-btn{display: block;width: 33.3%;float: left;height: 60px;}
+}
 

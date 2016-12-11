@@ -79,19 +79,9 @@
         }
       },
       playAudio(index){
-        this.$store.commit("toggleAudioLoadding");
-        this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
-          var json_obj = JSON.parse(res.data);
-          var songUrl = json_obj.url,
-            imgUrl = json_obj.imgUrl.split('{size}').join('100'),
-            title = json_obj.songName,
-            singer = json_obj.choricSinger,
-            songLength=json_obj.timeLength,
-            currentLength= 0,
-            audio = {songUrl, imgUrl, title, singer,songLength,currentLength};
-          this.$store.commit("toggleAudioLoadding");
-          this.$store.commit('setAudio',audio);
-        })
+        var hash=this.songList[index].hash;
+        this.$store.dispatch('getSong',hash);
+        this.$store.dispatch('getLrc',hash);
       },
       toggleDesp(){
         this.hideDesp=!this.hideDesp;

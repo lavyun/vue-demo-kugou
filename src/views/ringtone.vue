@@ -61,13 +61,13 @@
         //console.log(JSON.stringify(this.songList))
       },
       playAudio(index){
-        this.$store.commit("toggleAudioLoadding");
-        var songUrl=this.songList[index].songUrl;
-        var imgUrl='http://m.kugou.com/v3/static/images/index/logo_kugou.png';
-        var title=this.songList[index].title;
-        var singer=this.songList[index].desp.split('|')[0];
+        this.$store.commit("toggleAudioLoadding",true);
+        var songUrl=this.songList[index].songUrl,
+            imgUrl='http://m.kugou.com/v3/static/images/index/logo_kugou.png',
+            title=this.songList[index].title,
+            singer=this.songList[index].desp.split('|')[0];
         var audio={songUrl,imgUrl,title,singer}
-        this.$store.commit("toggleAudioLoadding");
+        this.$store.commit("toggleAudioLoadding",false);
         this.$store.commit('setAudio',audio);
       }
     }

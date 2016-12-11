@@ -11,7 +11,7 @@
         <p class="player-singer ellipsis">{{audio.singer}}</p>
       </div>
       <div class="player-controls">
-        <span class="player-Play" @click="toggleStatus" :class="{'player-Pause':toggleStatu}"></span>
+        <span class="player-Play" @click="toggleStatus" :class="{'player-Pause':isPlay}"></span>
         <span class="player-nextSong"></span>
       </div>
     </div>
@@ -26,24 +26,23 @@
     name:'player',
     data(){
       return {
-          toggleHide:false,
-          toggleStatu:true,
+          toggleHide:false
       }
     },
     computed:{
-      ...mapGetters(['audio','audioLoadding','showPlayer'])
+      ...mapGetters(['audio','audioLoadding','showPlayer','isPlay'])
     },
     methods:{
       togglePanel(){
         this.toggleHide=!this.toggleHide;
       },
       toggleStatus(){
-        if(this.toggleStatu){
+        if(this.isPlay){
           document.getElementById('audioPlay').pause();
         }else{
           document.getElementById('audioPlay').play();
         }
-        this.toggleStatu=!this.toggleStatu;
+        this.$store.commit('isPlay',!this.isPlay);
       },
       showDetailPlayer(){
         if(this.showPlayer){

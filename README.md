@@ -12,7 +12,8 @@ vuejs仿写酷狗音乐webapp
 > 2016/11/09：完成所有view级别组件<br>
 
 [在线演示][1]<br>
-[原站地址][2]
+[原站地址][2]<br>
+[混合APP打包][5]
 
 主要技术栈：
  - vuejs2.0
@@ -51,3 +52,4 @@ vuejs仿写酷狗音乐webapp
   [2]: http://m.kugou.com
   [3]: http://cs003.m2828.com
   [4]: http://weibo.com/u/5921186675
+  [5]: http://pan.baidu.com/s/1mhF1IYk

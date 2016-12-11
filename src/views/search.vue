@@ -71,9 +71,9 @@
         })
       },
       playAudio(index){
-        var hash=this.songList[index].hash;
-        this.$store.dispatch('getSong',hash);
-        this.$store.dispatch('getLrc',hash);
+        var hash = this.songList[index].hash;
+        this.$store.dispatch('getSong', hash);
+        this.$store.dispatch('getLrc', hash);
       }
     }
   }

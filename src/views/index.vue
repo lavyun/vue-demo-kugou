@@ -42,30 +42,18 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        //this.$http.get('http://cs003.m2828.com/jsons/index.json').then((res) => {
-        //this.$http.get('../jsons/plist.json').then((res) => {
         this.parseData(list_index);
-        //})
       },
       parseData(data){
         setTimeout(()=> {
           Indicator.close()
           this.songList = data;
         }, 1000)
-        //var div=document.createElement('div');
-        //div.innerHTML=data;
-        //var list=div.querySelectorAll('.panel-songslist-item');
-        //for(var i=0;i<list.length;i++){
-        //  var song={};
-        //  song.title=list[i].querySelector('.panel-songs-item-name span').innerText;
-        //  song.hash=list[i].id.substr(6);
-        //  this.songList.push(song)
-        //}
       },
       playAudio(index){
-        var hash=this.songList[index].hash;
-        this.$store.dispatch('getSong',hash);
-        this.$store.dispatch('getLrc',hash);
+        var hash = this.songList[index].hash;
+        this.$store.dispatch('getSong', hash);
+        this.$store.dispatch('getLrc', hash);
       }
     }
   }

@@ -5,25 +5,20 @@
         <img src="http://m.kugou.com/v3/static/images/index/logo.png" alt="">
       </a>
     </div>
-    <div class="head-download"><a href="#">下载酷狗</a></div>
-    <div class="head-search"  @click="searchRouter">
-        <img src="http://m.kugou.com/v3/static/images/index/search.png" alt="">
+    <div class="head-download"><a href="http://pan.baidu.com/s/1mhF1IYk">下载酷狗</a></div>
+    <div class="head-search" @click="searchRouter">
+      <img src="http://m.kugou.com/v3/static/images/index/search.png" alt="">
     </div>
   </div>
 </template>
 
 <script type="es6">
   export default {
-    name:'head-logo',
-    data(){
-      return {
-
-      }
-    },
-    methods:{
+    name: 'head-logo',
+    methods: {
       searchRouter(){
-        this.$store.commit('hideDetailPlayer')
-        this.$router.push({path:'/search'})
+        this.$store.commit('showDetailPlayer',false)
+        this.$router.push({path: '/search'})
       }
     }
   }

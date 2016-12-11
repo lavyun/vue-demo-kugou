@@ -1,6 +1,6 @@
 <template>
   <div class="audio-view" :class="{'audio_panel_hide':toggleHide}">
-    <audio :src="audio.songUrl"  autoplay loop id="audioPlay" @timeupdate="change()"></audio>
+    <audio :src="audio.songUrl" autoplay loop id="audioPlay" @timeupdate="change()"></audio>
     <div class="audio-panel-control" @click="togglePanel" :class="{'toggleContral':toggleHide}">
       <mt-spinner type="snake" :size="27" v-show="audioLoadding"></mt-spinner>
     </div>
@@ -23,39 +23,39 @@
   import { Spinner } from 'mint-ui'
 
   export default {
-    name:'player',
+    name: 'player',
     data(){
       return {
-          toggleHide:false
+        toggleHide: false
       }
     },
-    computed:{
-      ...mapGetters(['audio','audioLoadding','showPlayer','isPlay'])
+    computed: {
+      ...mapGetters(['audio', 'audioLoadding', 'showPlayer', 'isPlay'])
     },
-    methods:{
+    methods: {
       togglePanel(){
-        this.toggleHide=!this.toggleHide;
+        this.toggleHide = !this.toggleHide;
       },
       toggleStatus(){
-        if(this.isPlay){
+        if (this.isPlay) {
           document.getElementById('audioPlay').pause();
-        }else{
+        } else {
           document.getElementById('audioPlay').play();
         }
-        this.$store.commit('isPlay',!this.isPlay);
+        this.$store.commit('isPlay', !this.isPlay);
       },
       showDetailPlayer(){
-        if(this.showPlayer){
-          this.$store.commit('showDetailPlayer',true);
+        if (this.showPlayer) {
+          this.$store.commit('showDetailPlayer', true);
         }
       },
       change(){
-        var time=document.getElementById('audioPlay').currentTime
-        if(this.audio.currentFlag){
-          document.getElementById('audioPlay').currentTime=this.audio.currentLength;
-          this.$store.commit('setCurrent',false);
-        }else{
-          this.$store.commit('setAudioTime',time);
+        var time = document.getElementById('audioPlay').currentTime
+        if (this.audio.currentFlag) {
+          document.getElementById('audioPlay').currentTime = this.audio.currentLength;
+          this.$store.commit('setCurrent', false);
+        } else {
+          this.$store.commit('setAudioTime', time);
         }
       }
     }

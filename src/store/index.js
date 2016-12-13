@@ -86,7 +86,7 @@ const store = new Vuex.Store({
   actions: {
     getSong({commit,state}, hash){
       commit('toggleAudioLoadding', true);
-      Vue.http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash=' + hash).then(res=> {
+      Vue.http.get('http://lavyun.applinzi.com/apis/getKugouSong.php?hash=' + hash).then(res=> {
         var json_obj = JSON.parse(res.data);
         var songUrl = json_obj.url,
           imgUrl = json_obj.imgUrl.split('{size}').join('100'),
@@ -100,7 +100,7 @@ const store = new Vuex.Store({
       });
     },
     getLrc({commit,state}, hash){
-      Vue.http.get('http://cs003.m2828.com/phps/getLrc.php?hash=' + hash).then(res=> {
+      Vue.http.get('http://lavyun.applinzi.com/apis/getLrc.php?hash=' + hash).then(res=> {
         commit('setLrc', res.data);
       })
     }

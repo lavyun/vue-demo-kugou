@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 
-const route = new VueRouter({
+const router = new VueRouter({
 	routes:[{
     path:'/index',component:require('../views/index')
   },{
@@ -26,15 +26,8 @@ const route = new VueRouter({
     path:'/singer/info/:id',component:require('../views/singer_info')
   },{
     path:'*',redirect:'/index'
-  }],
-  scrollBehavior (to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
-    }
-  }
+  }]
 })
 
 
-export default route;
+export default router;

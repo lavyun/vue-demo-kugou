@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="singer_list">
     <mt-cell v-for="item in singerList" :to="item.location" is-link :title="item.name">
       <img slot="icon" :src="item.imgSrc" width="60" height="60">
     </mt-cell>
@@ -34,7 +34,7 @@
           spinnerType: 'snake'
         });
         var singerID = this.$route.params.id;
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/singer/list/&url2=' + singerID).then((res)=> {
+        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/singer/list/' + singerID).then((res)=> {
           Indicator.close();
           this.parseList(res.data);
         })
@@ -59,9 +59,9 @@
 </script>
 
 <style scoped>
-  .mint-cell {
-    padding: 10px 0
-  }
+  /*.mint-cell {*/
+    /*padding: 10px 0*/
+  /*}*/
 
   .mint-cell-title img {
     margin-right: 10px

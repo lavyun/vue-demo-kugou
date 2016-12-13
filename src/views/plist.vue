@@ -37,10 +37,6 @@
 </script>
 
 <style scoped>
-  .mint-cell {
-    padding: 10px 0 !important;
-  }
-
   .mint-cell-title img {
     margin-right: 5px !important;
   }

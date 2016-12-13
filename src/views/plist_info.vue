@@ -56,7 +56,7 @@
           spinnerType: 'snake'
         });
         var infoID=this.$route.params.id;
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/plist/list/&url2='+infoID).then((res)=>{
+        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path='+'/plist/list/'+infoID).then((res)=>{
           Indicator.close()
           this.parseList(res.data)
         })

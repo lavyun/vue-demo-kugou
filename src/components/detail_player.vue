@@ -85,7 +85,7 @@
         }
       },
       lrcOffset(){
-        if (this.songLrc.length) {
+        if (this.songLrc) {
           var offset = (this.songLrc.length - document.querySelectorAll('.isCurrentLrc').length - 2) * (-20);
           return this.audio.currentLength + offset - this.audio.currentLength;
         }

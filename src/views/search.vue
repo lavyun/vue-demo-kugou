@@ -45,7 +45,7 @@
           text: '加载中...',
           spinnerType: 'fading-circle'
         });
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/hot?plat=0&count=30&url2=').then((res)=> {
+        this.$http.get('http://lavyun.applinzi.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/hot?plat=0&count=30&url2=').then((res)=> {
           var list = JSON.parse(res.data).data.info;
           this.hotList = [...list.map(({keyword})=>keyword)];
           Indicator.close();
@@ -61,7 +61,7 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/song?keyword=' + this.keyword + '&page=1&pagesize=30&url2=').then((res)=> {
+        this.$http.get('http://lavyun.applinzi.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/song?keyword=' + this.keyword + '&page=1&pagesize=30&url2=').then((res)=> {
           var list = JSON.parse(res.data).data.info;
           this.total = JSON.parse(res.data).data.total
           this.songList = [...list.map(

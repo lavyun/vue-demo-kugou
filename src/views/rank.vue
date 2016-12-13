@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container rank">
     <mt-cell  v-for="(item,index) in rankList" :title="item.title"  :to="item.location" is-link>
       <img slot="icon" :src="item.imgUrl" width="60" height="60">
     </mt-cell>
@@ -24,7 +24,7 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/rank/list&url2=').then((res)=>{
+        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/rank/list').then((res)=>{
           Indicator.close();
           this.parseList(res.data);
         })
@@ -45,6 +45,6 @@
   }
 </script>
 <style scoped>
-  .mint-cell{padding: 10px 0 !important;}
+  /*.mint-cell{padding: 10px 0 !important;}*/
   .mint-cell-title img{margin-right: 5px !important;}
 </style>

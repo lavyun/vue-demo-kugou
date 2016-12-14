@@ -1,31 +1,26 @@
 <template>
   <div id="app">
-      <k-head></k-head>
-      <div class="main">
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
-      </div>
-      <!--<transition>-->
-        <!--<player v-show="audioFlag"></player>-->
-      <!--</transition>-->
+    <k-head></k-head>
+    <div class="main">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </div>
     <player></player>
+    <detail-player></detail-player>
   </div>
 </template>
 
 <script type="es6">
-import kHead from './components/header/head'
-import player from './components/player'
-import { mapGetters } from 'vuex'
-export default {
-  name: 'app',
-  components: {
-    kHead,player
+  import kHead from './components/header/head'
+  import player from './components/player'
+  import detailPlayer from './components/detail_player'
+  export default {
+    name: 'app',
+    components: {
+      kHead, player, detailPlayer
+    }
   }
-  //computed:{
-  //  ...mapGetters(['audioFlag'])
-  //}
-}
 </script>
 
 <style>

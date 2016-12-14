@@ -1,17 +1,17 @@
 <template>
   <div class="audio-view" :class="{'audio_panel_hide':toggleHide}">
-    <audio :src="audio.songUrl"  autoplay loop id="audioPlay"></audio>
+    <audio :src="audio.songUrl" autoplay loop id="audioPlay" @timeupdate="change()"></audio>
     <div class="audio-panel-control" @click="togglePanel" :class="{'toggleContral':toggleHide}">
       <mt-spinner type="snake" :size="27" v-show="audioLoadding"></mt-spinner>
     </div>
     <div class="audio-panel">
-      <img alt="" class="player-img" :src="audio.imgUrl">
-      <div class="player-status">
+      <img alt="" class="player-img" :src="audio.imgUrl" @click="showDetailPlayer()">
+      <div class="player-status" @click="showDetailPlayer()">
         <p class="player-title ellipsis">{{audio.title}}</p>
         <p class="player-singer ellipsis">{{audio.singer}}</p>
       </div>
       <div class="player-controls">
-        <span class="player-Play" @click="toggleStatus" :class="{'player-Pause':toggleStatu}"></span>
+        <span class="player-Play" @click="toggleStatus" :class="{'player-Pause':isPlay}"></span>
         <span class="player-nextSong"></span>
       </div>
     </div>
@@ -23,27 +23,40 @@
   import { Spinner } from 'mint-ui'
 
   export default {
-    name:'player',
+    name: 'player',
     data(){
       return {
-          toggleHide:false,
-          toggleStatu:true,
+        toggleHide: false
       }
     },
-    computed:{
-      ...mapGetters(['audio','audioLoadding'])
+    computed: {
+      ...mapGetters(['audio', 'audioLoadding', 'showPlayer', 'isPlay'])
     },
-    methods:{
+    methods: {
       togglePanel(){
-        this.toggleHide=!this.toggleHide;
+        this.toggleHide = !this.toggleHide;
       },
       toggleStatus(){
-        if(this.toggleStatu){
+        if (this.isPlay) {
           document.getElementById('audioPlay').pause();
-        }else{
+        } else {
           document.getElementById('audioPlay').play();
         }
-        this.toggleStatu=!this.toggleStatu;
+        this.$store.commit('isPlay', !this.isPlay);
+      },
+      showDetailPlayer(){
+        if (this.showPlayer) {
+          this.$store.commit('showDetailPlayer', true);
+        }
+      },
+      change(){
+        var time = document.getElementById('audioPlay').currentTime
+        if (this.audio.currentFlag) {
+          document.getElementById('audioPlay').currentTime = this.audio.currentLength;
+          this.$store.commit('setCurrent', false);
+        } else {
+          this.$store.commit('setAudioTime', time);
+        }
       }
     }
   }

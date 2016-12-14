@@ -6,14 +6,14 @@
 
     <div class="plist-desp container">
       <p class="plist-desp-p" :class="{'plist-desp-hide': hideDesp }">{{desp}}</p>
-      <img src="../../static/close_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
-      <img src="../../static/open_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-else>
+      <img src="../assets/images/close_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
+      <img src="../assets/images/open_icon.png" alt="" @click="toggleDesp" class="plist-desp-icon" v-else>
     </div>
     <div class="plist-desp-bottom" style="width: 100%;height: 5px;background-color: #f1f1f1"></div>
 
     <div class="rank-info-list">
       <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
-        <img src="../../static/download_icon.png" alt="" width="20" height="20">
+        <img src="../assets/images/download_icon.png" alt="" width="20" height="20">
       </mt-cell>
     </div>
   </div>
@@ -36,7 +36,7 @@
     //通过路由的before钩子解除router-view缓存限制
     beforeRouteEnter (to, from, next) {
       next(vm => {
-        vm.$store.commit('showHead')
+        vm.$store.commit('showHead',true);
         vm.get();
         window.onscroll=()=>{
           vm.opacity=window.pageYOffset/250;
@@ -45,7 +45,7 @@
       })
     },
     beforeRouteLeave(to,from,next){
-      this.$store.commit('hideHead');
+      this.$store.commit('showHead',false);
       window.onscroll=null;
       next()
     },
@@ -56,7 +56,7 @@
           spinnerType: 'snake'
         });
         var infoID=this.$route.params.id;
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/plist/list/&url2='+infoID).then((res)=>{
+        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path='+'/plist/list/'+infoID).then((res)=>{
           Indicator.close()
           this.parseList(res.data)
         })
@@ -79,16 +79,9 @@
         }
       },
       playAudio(index){
-        this.$store.commit("toggleAudioLoadding");
-        this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
-          var songUrl=JSON.parse(res.data).url;
-          var imgUrl=JSON.parse(res.data).imgUrl.split('{size}').join('100');
-          var title=JSON.parse(res.data).songName;
-          var singer=JSON.parse(res.data).choricSinger;
-          var audio={songUrl,imgUrl,title,singer}
-          this.$store.commit("toggleAudioLoadding");
-          this.$store.commit('setAudio',audio);
-        })
+        var hash=this.songList[index].hash;
+        this.$store.dispatch('getSong',hash);
+        this.$store.dispatch('getLrc',hash);
       },
       toggleDesp(){
         this.hideDesp=!this.hideDesp;

@@ -1,6 +1,7 @@
 <template>
   <div class="rank-info-content plist-info">
-    <div class="rank-banner-wrap" :style="{'background-image':'url('+imgSrc+')','background-size': '100%','background-repeat': 'no-repeat','background-position': 'top center'}">
+    <div class="rank-banner-wrap"
+         :style="{'background-image':'url('+imgSrc+')','background-size': '100%','background-repeat': 'no-repeat','background-position': 'top center'}">
 
     </div>
 
@@ -23,78 +24,89 @@
   export default {
     data(){
       return {
-        imgSrc:'',
-        title:'',
-        songList:[],
-        updateTime:'',
-        desp:'',
-        hideDesp:true,
-        opacity:0
+        imgSrc: '',
+        title: '',
+        songList: [],
+        updateTime: '',
+        desp: '',
+        hideDesp: true,
+        opacity: 0
       }
     },
     //通过路由的before钩子解除router-view缓存限制
     beforeRouteEnter (to, from, next) {
       next(vm => {
-        vm.$store.commit('showHead')
+        vm.$store.commit('showHead', true)
         vm.get();
-        window.onscroll=()=>{
-          vm.opacity=window.pageYOffset/250;
-          vm.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+vm.opacity+')'})
+        window.onscroll = ()=> {
+          vm.opacity = window.pageYOffset / 250;
+          vm.$store.commit('setHeadStyle', {background: 'rgba(43,162,251,' + vm.opacity + ')'})
         }
       })
     },
-    beforeRouteLeave(to,from,next){
-      this.$store.commit('hideHead');
-      window.onscroll=null;
+    beforeRouteLeave(to, from, next){
+      this.$store.commit('showHead', false);
+      window.onscroll = null;
       next()
     },
-    methods:{
+    methods: {
       get(){
         Indicator.open({
           text: '加载中...',
           spinnerType: 'snake'
         });
-        var infoID=this.$route.params.id;
-        this.$http.get('http://cs003.m2828.com/demo/searchIT/proxy.php?val=&url1=http://m.kugou.com/singer/info/&url2='+infoID).then((res)=>{
+        var infoID = this.$route.params.id;
+        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/singer/info/' + infoID).then((res)=> {
           Indicator.close()
           this.parseList(res.data)
+
         })
       },
       parseList(data){
-        var div=document.createElement('div');
-        div.innerHTML=data;
-        this.imgSrc=div.querySelector('#imgBoxInfo img').src;
-        this.title=div.querySelector('.page-title').innerText;
-        this.desp=div.querySelector('#introBox p').innerText;
-        this.$store.commit('setHeadTitle',this.title);
-        var list=div.querySelectorAll('.panel-songslist-item');
-        this.songList = [];
-        for(var i=0;i<list.length;i++){
-          var song={};
-          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
-          var hash=list[i].id.substr(6);
-          song.title=title;song.hash=hash;
-          this.songList.push(song)
+        var div = document.createElement('div');
+        div.innerHTML = data;
+        if (div.querySelector('#imgBoxInfo')) {
+          this.imgSrc = div.querySelector('#imgBoxInfo img').src;
+          this.title = div.querySelector('.page-title').innerText;
+          this.desp = div.querySelector('#introBox p').innerText;
+          this.songList = [];
+          var list = div.querySelectorAll('.panel-songslist-item');
+          for (let i = 0; i < list.length; i++) {
+            var song = {};
+            song.title = list[i].querySelector('.panel-songs-item-name span').innerText;
+            song.hash = list[i].id.substr(6);
+            this.songList.push(song)
+          }
+        } else {
+          var imgSrc_A = div.querySelector('.sng_ins_1 .top img').getAttribute("_src").split('/120');
+          this.imgSrc = imgSrc_A[0] + '/480' + imgSrc_A[1];
+          this.title = div.querySelector('.sng_ins_1 .top .intro .clear_fix').innerText;
+          this.desp = div.querySelector('#text .bordr_cen').innerText;
+          this.songList = [];
+          var list = div.querySelectorAll('#song_container li');
+          for (let i = 0; i < list.length; i++) {
+            var song = {};
+            var song_info = list[i].querySelector('.song_hid').value.split("|");
+            song.title = song_info[0]
+            song.hash = song_info[1];
+            this.songList.push(song)
+          }
         }
+        this.$store.commit('setHeadTitle', this.title);
       },
       playAudio(index){
-        this.$store.commit("toggleAudioLoadding");
-        this.$http.get('http://cs003.m2828.com/phps/getKugouSong.php?hash='+this.songList[index].hash).then((res)=>{
-          var songUrl=JSON.parse(res.data).url;
-          var imgUrl=JSON.parse(res.data).imgUrl.split('{size}').join('100');
-          var title=JSON.parse(res.data).songName;
-          var singer=JSON.parse(res.data).choricSinger;
-          var audio={songUrl,imgUrl,title,singer}
-          this.$store.commit("toggleAudioLoadding");
-          this.$store.commit('setAudio',audio);
-        })
+        var hash = this.songList[index].hash;
+        this.$store.dispatch('getSong', hash);
+        this.$store.dispatch('getLrc', hash);
       },
       toggleDesp(){
-        this.hideDesp=!this.hideDesp;
+        this.hideDesp = !this.hideDesp;
       }
     }
   }
 </script>
 <style scoped>
-  .rank-banner-wrap{height: 250px;}
+  .rank-banner-wrap {
+    height: 250px;
+  }
 </style>

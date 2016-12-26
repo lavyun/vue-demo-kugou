@@ -18,7 +18,7 @@
         共有{{total}}条搜索结果
       </div>
       <mt-cell v-for="(item,index) in songList" :title="item.filename" @click.native="playAudio(index)">
-        <img src="../../static/download_icon.png" alt="" width="20" height="20">
+        <img src="../assets/images/download_icon.png" width="20" height="20">
       </mt-cell>
     </div>
   </div>
@@ -37,7 +37,7 @@
       }
     },
     created(){
-      this.getList()
+      this.getList();
     },
     methods: {
       getList(){
@@ -49,11 +49,11 @@
           var list = JSON.parse(res.data).data.info;
           this.hotList = [...list.map(({keyword})=>keyword)];
           Indicator.close();
-        })
+        });
       },
       replaceInput(index){
         this.keyword = this.hotList[index];
-        this.search()
+        this.search();
       },
       search(){
         this.togglePanel = false;
@@ -68,7 +68,7 @@
             ({filename,hash})=>({filename, hash})
           )];
           Indicator.close();
-        })
+        });
       },
       playAudio(index){
         var hash = this.songList[index].hash;

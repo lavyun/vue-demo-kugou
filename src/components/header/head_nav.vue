@@ -11,7 +11,7 @@
 </template>
 
 <script type="es6">
-  import { Navbar, TabItem } from 'mint-ui';
+  import { Navbar, TabItem } from 'mint-ui'
   import{ mapState } from 'vuex'
   export default {
     name: 'head-nav',

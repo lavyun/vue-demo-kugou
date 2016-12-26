@@ -48,7 +48,7 @@ vuejs仿写酷狗音乐webapp
 [微博粉我][4]
 
 
-  [1]: http://lavyun.applinzi.com/demos/kugouApp/
+  [1]: http://cs003.m2828.com/demo/kugouApp/
   [2]: http://m.kugou.com
   [3]: http://cs003.m2828.com
   [4]: http://weibo.com/u/5921186675

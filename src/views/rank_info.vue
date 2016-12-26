@@ -13,7 +13,7 @@
     <div class="rank-info-list">
       <mt-cell v-for="(item,index) in songList" :title="item.title" @click.native="playAudio(index)">
         <span class="rank-index" :class="{'rank-list-good' : index<3, 'rank-list-first' : index==0, 'rank-list-second' : index==1, 'rank-list-third' : index==2}">{{index+1}}</span>
-        <img src="../../static/download_icon.png" alt="" width="20" height="20">
+        <img src="../assets/images/download_icon.png" width="20" height="20">
       </mt-cell>
     </div>
   </div>
@@ -38,7 +38,7 @@
         vm.get();
         window.onscroll=()=>{
           vm.opacity=window.pageYOffset/250;
-          vm.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+vm.opacity+')'})
+          vm.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+vm.opacity+')'});
         }
       })
     },
@@ -50,7 +50,7 @@
     mounted(){
       window.onscroll=()=>{
         this.opacity=window.pageYOffset/200;
-        this.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+this.opacity+')'})
+        this.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+this.opacity+')'});
       }
     },
     methods:{
@@ -61,8 +61,8 @@
         });
         var infoID=this.$route.params.id;
         this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/rank/info/'+infoID).then((res)=>{
-          Indicator.close()
-          this.parseList(res.data)
+          Indicator.close();
+          this.parseList(res.data);
         })
       },
       parseList(data){
@@ -76,10 +76,9 @@
         this.songList = [];
         for(var i=0;i<list.length;i++){
           var song={};
-          var title=list[i].querySelector('.panel-songs-item-name span').innerText;
-          var hash=list[i].id.substr(6);
-          song.title=title;song.hash=hash;
-          this.songList.push(song)
+          song.title=list[i].querySelector('.panel-songs-item-name span').innerText;
+          song.hash=list[i].id.substr(6);
+          this.songList.push(song);
         }
       },
       playAudio(index){

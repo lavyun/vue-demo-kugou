@@ -3,7 +3,6 @@
     <headLogo></headLogo>
     <rank-head v-if="head.toggle" :title="head.title" :style="head.style"></rank-head>
     <head-nav v-else></head-nav>
-
   </div>
 </template>
 

@@ -23,6 +23,3 @@
   }
 </script>
 
-<style>
-
-</style>

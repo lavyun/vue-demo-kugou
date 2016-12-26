@@ -2,7 +2,7 @@
   <div class="container ringtone">
     <mt-cell v-for="(item,index) in songList" :title="item.title" :label="item.desp" @click.native="playAudio(index)">
       <a :href="item.orderUrl" class="order-img">
-        <img src="../../static/order-ring.png" alt="">
+        <img src="../assets/images/order-ring.png">
         <p>订阅</p>
       </a>
     </mt-cell>
@@ -40,9 +40,9 @@
       },
       parseList(data){
         setTimeout(()=> {
-          Indicator.close()
+          Indicator.close();
           this.songList = data;
-        }, 1000)
+        }, 1000);
       },
       playAudio(index){
         this.$store.commit("toggleAudioLoadding", true);

@@ -16,7 +16,7 @@
       }
     },
     created(){
-      this.getList()
+      this.getList();
     },
     methods:{
       getList(){
@@ -27,7 +27,7 @@
         this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/rank/list').then((res)=>{
           Indicator.close();
           this.parseList(res.data);
-        })
+        });
       },
       parseList(data){
         var div=document.createElement('div');
@@ -38,13 +38,12 @@
           rank.title=list[i].querySelector('.panel-img-content p').innerText;
           rank.imgUrl=list[i].querySelector('.panel-img-left img').getAttribute('_src');
           rank.location="/rank/info/"+list[i].querySelector('a').href.substr(29);
-          this.rankList.push(rank)
+          this.rankList.push(rank);
         }
       }
     }
   }
 </script>
 <style scoped>
-  /*.mint-cell{padding: 10px 0 !important;}*/
   .mint-cell-title img{margin-right: 5px !important;}
 </style>

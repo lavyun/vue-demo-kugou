@@ -12,11 +12,11 @@
   export default {
     data(){
       return {
-        plist: []
+        plist: [],
       }
     },
     created(){
-      this.getList()
+      this.getList();
     },
     methods: {
       getList(){
@@ -24,13 +24,13 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.parseList(list_plist)
+        this.parseList(list_plist);
       },
       parseList(data){
         setTimeout(()=> {
-          Indicator.close()
+          Indicator.close();
           this.plist = data;
-        }, 1000)
+        }, 1000);
       }
     }
   }

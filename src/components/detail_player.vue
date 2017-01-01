@@ -14,7 +14,7 @@
       <div class="detail_player-lrc">
         <div class="lrc-content" :style="{'margin-top':lrcOffset+'px'}">
           <p v-for="(item,index) in songLrc"
-             :class="{'isCurrentLrc':item.seconds>=audio.currentLength,'desCurrentLrc':item.seconds<audio.currentLength}">
+             :class="{'isCurrentLrc':item.seconds>=audio.currentLength,'disCurrentLrc':item.seconds<audio.currentLength}">
             {{item.lrcContent}}</p>
         </div>
       </div>
@@ -31,9 +31,9 @@
         <span class="detail_player-time">{{audio.songLength | time}}</span>
       </div>
       <div class="detail_player-control player-padding">
-        <i class="detail_player-btn play-prev player_btn-sm"></i>
+        <i class="detail_player-btn play-prev player_btn-sm" @click="prev()"></i>
         <i class="detail_player-btn play-play player_btn-lg" :class="{'play-pause':isPlay}" @click="toggleStatus()"></i>
-        <i class="detail_player-btn play-next player_btn-sm"></i>
+        <i class="detail_player-btn play-next player_btn-sm" @click="next()"></i>
       </div>
     </div>
   </div>
@@ -111,6 +111,12 @@
           document.getElementById('audioPlay').play();
         }
         this.$store.commit('isPlay', !this.isPlay);
+      },
+      prev(){
+        this.$store.dispatch('prev');
+      },
+      next(){
+        this.$store.dispatch('next');
       }
     }
   }

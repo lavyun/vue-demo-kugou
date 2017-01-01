@@ -10,14 +10,11 @@
 </template>
 
 <script type="es6">
-  import {Cell,Indicator} from 'mint-ui'
+  import { Cell, Indicator } from 'mint-ui'
   import list_rings from '../jsons/list_rings'
+  import { INIT } from '../mixins'
   export default {
-    data(){
-      return {
-        songList: []
-      }
-    },
+    mixins: [INIT],
     beforeRouteEnter(to, from, next){
       next(vm=> {
         vm.$store.commit('showPlayer', false);
@@ -26,9 +23,6 @@
     beforeRouteLeave(to, from, next){
       this.$store.commit('showPlayer', true);
       next();
-    },
-    created(){
-      this.getList();
     },
     methods: {
       getList(){
@@ -50,7 +44,7 @@
           imgUrl = 'http://m.kugou.com/v3/static/images/index/logo_kugou.png',
           title = this.songList[index].title,
           singer = this.songList[index].desp.split('|')[0];
-        var audio = {songUrl, imgUrl, title, singer}
+        var audio = {songUrl, imgUrl, title, singer};
         this.$store.commit("toggleAudioLoadding", false);
         this.$store.commit('setAudio', audio);
       }

@@ -1,6 +1,6 @@
 <template>
   <div class="container plist">
-    <mt-cell v-for="(item,index) in plist" :title="item.title" is-link :label="item.countPlay" :to="item.location">
+    <mt-cell v-for="(item,index) in songList" :title="item.title" is-link :label="item.countPlay" :to="item.location">
       <img slot="icon" :src="item.imgUrl" width="60" height="60">
     </mt-cell>
   </div>
@@ -9,15 +9,9 @@
 <script type="es6">
   import { Cell,Indicator } from 'mint-ui'
   import list_plist from '../jsons/list_plist'
+  import {INIT} from '../mixins'
   export default {
-    data(){
-      return {
-        plist: [],
-      }
-    },
-    created(){
-      this.getList();
-    },
+    mixins:[INIT],
     methods: {
       getList(){
         Indicator.open({
@@ -29,7 +23,7 @@
       parseList(data){
         setTimeout(()=> {
           Indicator.close();
-          this.plist = data;
+          this.songList = data;
         }, 1000);
       }
     }

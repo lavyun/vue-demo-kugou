@@ -100,34 +100,22 @@
 <script type="es6">
   import { Swipe, SwipeItem,Indicator,Cell } from 'mint-ui';
   import list_index from '../jsons/list_index'
+  import {INIT,PLAY_AUDIO} from '../mixins'
   export default{
-    data(){
-      return {
-        songList: []
-      }
-    },
-    created(){
-      this.get()
-    },
-    components: {},
+    mixins:[INIT,PLAY_AUDIO],
     methods: {
-      get(){
+      getList(){
         Indicator.open({
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.parseData(list_index);
+        this.parseList(list_index);
       },
-      parseData(data){
+      parseList(data){
         setTimeout(()=> {
           Indicator.close()
           this.songList = data;
         }, 1000)
-      },
-      playAudio(index){
-        var hash = this.songList[index].hash;
-        this.$store.dispatch('getSong', hash);
-        this.$store.dispatch('getLrc', hash);
       }
     }
   }

@@ -21,7 +21,9 @@
 
 <script type="es6">
   import { Indicator } from 'mint-ui'
+  import { PLAY_AUDIO } from '../mixins'
   export default {
+    mixins:[PLAY_AUDIO],
     data(){
       return {
         imgSrc:'',
@@ -35,10 +37,10 @@
     beforeRouteEnter (to, from, next) {
       next(vm => {
         vm.$store.commit('showHead',true)
-        vm.get();
+        vm.getList();
         window.onscroll=()=>{
           vm.opacity=window.pageYOffset/250;
-          vm.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+vm.opacity+')'});
+          vm.$store.commit('setHeadStyle',{background:`rgba(43,162,251,${vm.opacity})`});
         }
       })
     },
@@ -50,17 +52,17 @@
     mounted(){
       window.onscroll=()=>{
         this.opacity=window.pageYOffset/200;
-        this.$store.commit('setHeadStyle',{background:'rgba(43,162,251,'+this.opacity+')'});
+        this.$store.commit('setHeadStyle',{background:`rgba(43,162,251,${this.opacity})`});
       }
     },
     methods:{
-      get(){
+      getList(){
         Indicator.open({
           text: '加载中...',
           spinnerType: 'snake'
         });
         var infoID=this.$route.params.id;
-        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/rank/info/'+infoID).then((res)=>{
+        this.$http.get(`http://lavyun.applinzi.com/apis/getPage.php?path=/rank/info/${infoID}`).then(res=>{
           Indicator.close();
           this.parseList(res.data);
         })
@@ -80,11 +82,6 @@
           song.hash=list[i].id.substr(6);
           this.songList.push(song);
         }
-      },
-      playAudio(index){
-        var hash=this.songList[index].hash;
-        this.$store.dispatch('getSong',hash);
-        this.$store.dispatch('getLrc',hash);
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="audio-view" :class="{'audio_panel_hide':toggleHide}">
-    <audio :src="audio.songUrl" autoplay loop id="audioPlay" @timeupdate="change()"></audio>
+    <audio :src="audio.songUrl" autoplay id="audioPlay" @timeupdate="change()" @ended="next()" @error="next()"></audio>
     <div class="audio-panel-control" @click="togglePanel" :class="{'toggleContral':toggleHide}">
       <mt-spinner type="snake" :size="27" v-show="audioLoadding"></mt-spinner>
     </div>
@@ -11,8 +11,8 @@
         <p class="player-singer ellipsis">{{audio.singer}}</p>
       </div>
       <div class="player-controls">
-        <span class="player-Play" @click="toggleStatus" :class="{'player-Pause':isPlay}"></span>
-        <span class="player-nextSong"></span>
+        <span class="player-Play" @click="toggleStatus()" :class="{'player-Pause':isPlay}"></span>
+        <span class="player-nextSong" @click="next()"></span>
       </div>
     </div>
   </div>
@@ -57,6 +57,9 @@
         } else {
           this.$store.commit('setAudioTime', time);
         }
+      },
+      next(){
+        this.$store.dispatch('next');
       }
     }
   }

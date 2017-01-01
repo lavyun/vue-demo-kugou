@@ -6,8 +6,8 @@
 
     <div class="plist-desp container">
       <p class="plist-desp-p" :class="{'plist-desp-hide': hideDesp }">{{desp}}</p>
-      <img src="../assets/images/close_icon.png"  @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
-      <img src="../assets/images/open_icon.png"  @click="toggleDesp" class="plist-desp-icon" v-else>
+      <img src="../assets/images/close_icon.png" @click="toggleDesp" class="plist-desp-icon" v-if="hideDesp">
+      <img src="../assets/images/open_icon.png" @click="toggleDesp" class="plist-desp-icon" v-else>
     </div>
     <div class="plist-desp-bottom" style="width: 100%;height: 5px;background-color: #f1f1f1"></div>
 
@@ -20,7 +20,9 @@
 </template>
 <script type="es6">
   import { Indicator } from 'mint-ui'
+  import { PLAY_AUDIO } from '../mixins'
   export default {
+    mixins: [PLAY_AUDIO],
     data(){
       return {
         imgSrc: '',
@@ -39,7 +41,7 @@
         vm.get();
         window.onscroll = ()=> {
           vm.opacity = window.pageYOffset / 250;
-          vm.$store.commit('setHeadStyle', {background: 'rgba(43,162,251,' + vm.opacity + ')'});
+          vm.$store.commit('setHeadStyle', {background: `rgba(43,162,251,${vm.opacity})`});
         }
       })
     },
@@ -55,7 +57,7 @@
           spinnerType: 'snake'
         });
         var infoID = this.$route.params.id;
-        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/singer/info/' + infoID).then((res)=> {
+        this.$http.get(`http://lavyun.applinzi.com/apis/getPage.php?path=/singer/info/${infoID}`).then((res)=> {
           Indicator.close();
           this.parseList(res.data);
         });
@@ -91,11 +93,6 @@
           }
         }
         this.$store.commit('setHeadTitle', this.title);
-      },
-      playAudio(index){
-        var hash = this.songList[index].hash;
-        this.$store.dispatch('getSong', hash);
-        this.$store.dispatch('getLrc', hash);
       },
       toggleDesp(){
         this.hideDesp = !this.hideDesp;

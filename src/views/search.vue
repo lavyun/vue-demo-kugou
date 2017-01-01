@@ -26,18 +26,16 @@
 
 <script type="es6">
   import { Indicator } from 'mint-ui'
+  import { INIT, PLAY_AUDIO } from '../mixins'
   export default {
+    mixins: [INIT, PLAY_AUDIO],
     data(){
       return {
         keyword: '',
         hotList: [],
         togglePanel: true,
-        songList: [],
         total: null
       }
-    },
-    created(){
-      this.getList();
     },
     methods: {
       getList(){
@@ -45,7 +43,7 @@
           text: '加载中...',
           spinnerType: 'fading-circle'
         });
-        this.$http.get('http://lavyun.applinzi.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/hot?plat=0&count=30&url2=').then((res)=> {
+        this.$http.get('http://lavyun.applinzi.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/hot?plat=0&count=30&url2=').then(res=> {
           var list = JSON.parse(res.data).data.info;
           this.hotList = [...list.map(({keyword})=>keyword)];
           Indicator.close();
@@ -61,7 +59,7 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.$http.get('http://lavyun.applinzi.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/song?keyword=' + this.keyword + '&page=1&pagesize=30&url2=').then((res)=> {
+        this.$http.get('http://lavyun.applinzi.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/song?keyword=' + this.keyword + '&page=1&pagesize=30&url2=').then(res=> {
           var list = JSON.parse(res.data).data.info;
           this.total = JSON.parse(res.data).data.total
           this.songList = [...list.map(
@@ -69,11 +67,6 @@
           )];
           Indicator.close();
         });
-      },
-      playAudio(index){
-        var hash = this.songList[index].hash;
-        this.$store.dispatch('getSong', hash);
-        this.$store.dispatch('getLrc', hash);
       }
     }
   }

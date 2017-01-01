@@ -28,7 +28,11 @@ const store = new Vuex.Store({
     detailPlayerFlag: false,
     showPlayer: false,
     listenCount: 0,
-    isPlay: true
+    isPlay: true,
+    listInfo: {
+      songList: [],
+      songIndex: 0
+    }
   },
   getters: {
     audio: state=>state.audio,
@@ -81,12 +85,16 @@ const store = new Vuex.Store({
     },
     setLrc: (state, lrc)=> {
       state.audio = {...(state.audio), lrc}
+    },
+    setListInfo: (state, {list,index})=> {
+      state.listInfo.songList = list;
+      state.listInfo.songIndex = index;
     }
   },
   actions: {
     getSong({commit,state}, hash){
       commit('toggleAudioLoadding', true);
-      Vue.http.get('http://lavyun.applinzi.com/apis/getKugouSong.php?hash=' + hash).then(res=> {
+      Vue.http.get(`http://lavyun.applinzi.com/apis/getKugouSong.php?hash=${hash}`).then(res=> {
         var json_obj = JSON.parse(res.data);
         var songUrl = json_obj.url,
           imgUrl = json_obj.imgUrl.split('{size}').join('100'),
@@ -100,9 +108,31 @@ const store = new Vuex.Store({
       });
     },
     getLrc({commit,state}, hash){
-      Vue.http.get('http://lavyun.applinzi.com/apis/getLrc.php?hash=' + hash).then(res=> {
+      Vue.http.get(`http://lavyun.applinzi.com/apis/getLrc.php?hash=${hash}`).then(res=> {
         commit('setLrc', res.data);
       })
+    },
+    prev({dispatch,state}){
+      var list = state.listInfo.songList;
+      if(state.listInfo.songIndex==0){
+        state.listInfo.songIndex=list.length;
+      } else {
+        state.listInfo.songIndex--;
+      }
+      var hash = list[state.listInfo.songIndex].hash;
+      dispatch('getSong', hash);
+      dispatch('getLrc',hash);
+    },
+    next({dispatch,state}){
+      var list = state.listInfo.songList;
+      if (state.listInfo.songIndex == list.length - 1) {
+        state.listInfo.songIndex = 0
+      } else {
+        ++state.listInfo.songIndex;
+      }
+      var hash = list[state.listInfo.songIndex].hash;
+      dispatch('getSong', hash);
+      dispatch('getLrc',hash);
     }
   }
 });

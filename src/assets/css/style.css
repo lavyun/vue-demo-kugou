@@ -78,7 +78,6 @@ a{text-decoration: none !important;}
 .play-next{background: url("../images/play_next.png") no-repeat;background-size: 60% auto;background-position: center}
 .detail_player-lrc{width: 100%;height: 60px;overflow: hidden;margin-bottom: 20px;text-align: center;color: #fff;line-height: 20px;}
 .lrc-content{transition: all .5s;transform: translateZ(0)}
-.desCurrentLrc:last-of-type{color: orange}
 
 /* over ride */
 .mint-cell{padding-left: 10px}

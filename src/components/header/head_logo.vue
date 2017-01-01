@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="head-download">
-      <a href="http://pan.baidu.com/s/1boFKkIN">下载酷狗</a>
+      <a href="http://pan.baidu.com/s/1kV9F1Hl">下载酷狗</a>
     </div>
     <div class="head-search" @click="searchRouter">
       <img src="http://m.kugou.com/v3/static/images/index/search.png">

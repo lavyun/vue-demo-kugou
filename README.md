@@ -52,4 +52,4 @@ vuejs仿写酷狗音乐webapp
   [2]: http://m.kugou.com
   [3]: http://cs003.m2828.com
   [4]: http://weibo.com/u/5921186675
-  [5]: http://pan.baidu.com/s/1boFKkIN
+  [5]: http://http://pan.baidu.com/s/1kV9F1Hl

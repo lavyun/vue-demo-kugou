@@ -17,7 +17,7 @@
           text: '加载中...',
           spinnerType: 'snake'
         });
-        this.$http.get('http://lavyun.applinzi.com/apis/getPage.php?path=/rank/list').then(res=>{
+        this.$http.get('http://cs003.m2828.com/apis/getPage.php?path=/rank/list').then(res=>{
           Indicator.close();
           this.parseList(res.data);
         });

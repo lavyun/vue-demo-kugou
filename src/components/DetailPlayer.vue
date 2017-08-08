@@ -1,20 +1,20 @@
 <template>
   <div v-show="detailPlayerFlag">
-    <div class="detail_player" :style="{'background-image':'url('+audio.imgUrl+')'}"></div>
+    <div class="detail_player" :style="{backgroundImage:`url(${audio.imgUrl})`}"></div>
     <div class="detail_player"
-         :style="{'background-image':'url('+audio.imgUrl+')','filter':'blur(5px)','-webkit-filter':'blur(5px)'}"></div>
+         :style="{backgroundImage:`url(${audio.imgUrl})`,filter: 'blur(5px)', '-webkit-filter':'blur(5px)'}"></div>
     <div class="detail_player-content">
       <div class="detail_player-title container">
         <span class="detail_player-back" @click="hideDetailPlayer()"></span>
         {{audio.title}}
       </div>
       <div class="detail_player-img">
-        <img :src="imgUrl">
+        <img :src="audio.imgUrl">
       </div>
       <div class="detail_player-lrc">
-        <div class="lrc-content" :style="{'margin-top':lrcOffset+'px'}">
+        <div class="lrc-content" :style="{marginTop: lrcOffset + 'px' }">
           <p v-for="(item,index) in songLrc"
-             :class="{'isCurrentLrc':item.seconds>=audio.currentLength,'disCurrentLrc':item.seconds<audio.currentLength}">
+             :class="{isCurrentLrc:item.seconds >= audio.currentLength}">
             {{item.lrcContent}}</p>
         </div>
       </div>
@@ -41,7 +41,6 @@
 
 <script type="es6">
   import {mapGetters} from 'vuex';
-  import {Range} from 'mint-ui'
   export default {
     data(){
       return {
@@ -64,18 +63,14 @@
     },
     computed: {
       ...mapGetters(['audio', 'detailPlayerFlag', 'isPlay']),
-      imgUrl(){
-        var temp = this.audio.imgUrl.split('/100');
-        return temp[0] + '/240' + temp[1]
-      },
       songLrc(){
         if (this.audio.lrc) {
-          var temp = this.audio.lrc.split('\r\n');
-          temp = temp.splice(0, temp.length - 1);
+          var temp = this.audio.lrc.split('\r\n')
+          temp = temp.splice(0, temp.length - 1)
           temp = temp.map((value)=> {
-            var time = value.substr(1, 5);
-            var seconds = parseInt(time.split(':')[0]) * 60 + parseInt(time.split(':')[1]);
-            var lrcContent = value.substr(10);
+            var time = value.substr(1, 5)
+            var seconds = parseInt(time.split(':')[0]) * 60 + parseInt(time.split(':')[1])
+            var lrcContent = value.substr(10)
             return {
               seconds,
               lrcContent
@@ -86,37 +81,37 @@
       },
       lrcOffset(){
         if (this.songLrc) {
-          var offset = (this.songLrc.length - document.querySelectorAll('.isCurrentLrc').length - 2) * (-20);
-          return this.audio.currentLength + offset - this.audio.currentLength;
+          var offset = (this.songLrc.length - document.querySelectorAll('.isCurrentLrc').length - 2) * (-20)
+          return this.audio.currentLength + offset - this.audio.currentLength
         }
       }
     },
     methods: {
       hideDetailPlayer(){
-        this.$store.commit("showDetailPlayer", false);
+        this.$store.commit("showDetailPlayer", false)
       },
       rangeChange(event){
-        var offset = event.offsetX;
-        var rangeWidth = (document.documentElement.clientWidth - 20) * 0.8 - 20;
-        var clickLength = Math.floor(offset * this.audio.songLength / rangeWidth);
+        var offset = event.offsetX
+        var rangeWidth = (document.documentElement.clientWidth - 20) * 0.8 - 20
+        var clickLength = Math.floor(offset * this.audio.songLength / rangeWidth)
         if (offset < rangeWidth) {
-          this.$store.commit('setAudioTime', clickLength);
-          this.$store.commit('setCurrent', true);
+          this.$store.commit('setAudioTime', clickLength)
+          this.$store.commit('setCurrent', true)
         }
       },
       toggleStatus(){
         if (this.isPlay) {
-          document.getElementById('audioPlay').pause();
+          document.getElementById('audioPlay').pause()
         } else {
-          document.getElementById('audioPlay').play();
+          document.getElementById('audioPlay').play()
         }
-        this.$store.commit('isPlay', !this.isPlay);
+        this.$store.commit('isPlay', !this.isPlay)
       },
       prev(){
-        this.$store.dispatch('prev');
+        this.$store.dispatch('prev')
       },
       next(){
-        this.$store.dispatch('next');
+        this.$store.dispatch('next')
       }
     }
   }

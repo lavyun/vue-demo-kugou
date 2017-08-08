@@ -1,33 +1,39 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-Vue.use(VueRouter);
-
+Vue.use(VueRouter)
 
 const router = new VueRouter({
-	routes:[{
-    path:'/index',component:require('../views/index')
-  },{
-    path:'/rank',component:require('../views/rank')
-  },{
-    path:'/ringtone',component:require('../views/ringtone')
-  },{
-    path:'/plist',component:require('../views/plist')
-  },{
-    path:'/singer',component:require('../views/singer')
-  },{
-    path:'/search',component:require('../views/search')
-  },{
-    path:'/rank/info/:id',component:require('../views/rank_info')
-  },{
-    path:'/plist/info/:id',component:require('../views/plist_info')
-  },{
-    path:'/singer/list/:id',component:require('../views/singer_list')
-  },{
-    path:'/singer/info/:id',component:require('../views/singer_info')
-  },{
-    path:'*',redirect:'/index'
-  }]
-});
+	routes: [{
+		path: '/newSongs',
+		component: require('../views/NewSongs'),
+		alias: '/'
+	}, {
+		path: '/rank',
+		component: require('../views/Rank')
+	}, {
+		path: '/plist',
+		component: require('../views/Plist')
+	}, {
+		path: '/singer',
+		component: require('../views/Singer')
+	}, {
+		path: '/search',
+		component: require('../views/Search')
+	}, {
+		path: '/rank/info/:id',
+		component: require('../views/RankInfo')
+	}, {
+		path: '/plist/info/:id',
+		component: require('../views/PlistInfo')
+	}, {
+		path: '/singer/list/:id',
+		component: require('../views/SingerList')
+	}, {
+		path: '/singer/info/:id',
+		component: require('../views/SingerInfo')
+	}, {
+		path: '*', redirect: '/'
+	}]
+})
 
-
-export default router;
+export default router

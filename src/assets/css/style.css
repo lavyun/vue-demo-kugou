@@ -8,23 +8,24 @@ a{text-decoration: none !important;}
 .head-download a{display: block;height: 100%;width: 100%;border: 1px solid #fff;text-align: center;color: #fff;border-radius: 5px;}
 .head-search{float: right;height: 31px;padding: 3px 0}
 .head-search img{height: 100%}
-.header-nav{border-bottom: 3px solid #f4f4f4;position: fixed;top: 51px;left: 0;width: 100%;z-index: 1000}
+.header-nav{position: fixed;top: 51px;left: 0;width: 100%;z-index: 1000;border-bottom: 1px solid #e4e4e4}
 .main{margin-top: 94px;}
 .search-panel{padding: 10px;background-color: #fbfbfb;height: 55px;}
 .search-input{width: 80%;height: 100%;display: block;border: 1px solid #e5e5e5;border-radius: 7px;float: left;background-color: #fff}
 .search-icon{display: block;float:left;width: 10%;height: 100%;background: url("http://m.kugou.com/v3/static/images/index/search_icon.png") no-repeat center;background-size: auto 100%}
 .search-input input{width: 90%;height: 100%;display: inline-block;padding: 0 10px 0 0;border: none;outline: none;background-color: transparent}
-.search-btn{display: block;height: 100%;width: 18%;background-color: #2ba2fa;float: right;border-radius: 7px;color: #fff;font-size: 16px;text-align: center;line-height: 35px;border: none;outline: none}
+.search-btn{display: block;height: 100%;width: 18%;background-color: #2ba2fa;float: right;border-radius: 7px;color: #fff;font-size: 15px;text-align: center;line-height: 35px;border: none;outline: none}
 .search-list-title{padding: 10px;color: deepskyblue}
 .search-total{padding: 5px 10px;background-color: #e1e1e1;color: #484848}
 .rank-head{width: 100%;height: 43px;position: fixed;background: -webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0));top: 51px;z-index: 999;color: #fff;font-size: 18px;text-align: center;line-height: 43px;}
-.rank-banner-wrap{width: 100%;height: 200px;margin-top: -43px;position: relative}
+.rank-banner-wrap{width: 100%;height: 200px;margin-top: -43px;position: relative;background-position: center;
+    background-repeat: no-repeat;background-size: 100%}
 .rank-head-back{display: block;float: left;width: 24px;height: 100%;background: url("../images/goback_icon.png") no-repeat center;background-size: 60% 60%;position: absolute;left: 5px;top:0}
 .rank-status{height: 43px;width: 100%;position: absolute;bottom: 0;left: 0;background: -webkit-linear-gradient(bottom,rgba(0,0,0,.6),rgba(0,0,0,0));line-height:43px;font-size: 15px;color: #fff}
 .rank-info-list .rank-index{position: absolute;left: 20px;font-size: 12px;margin-top: 4px}
 .rank-info-list .mint-cell-title{padding-left: 35px;}
-.plist .mint-cell-text{position: absolute;left: 80px;top: 23px;padding-right: 40px;height: 16px;overflow: hidden;line-height: 16px;}
-.plist .mint-cell-label{position: absolute;left: 80px;top: 38px}
+.plist .mint-cell-text{position: absolute;left: 90px;top: 23px;padding-right: 40px;height: 16px;overflow: hidden;line-height: 16px;}
+.plist .mint-cell-label{position: absolute;left: 90px;top: 38px}
 .plist .mint-cell-label:before{content: '';display: inline-block;width: 12px;height: 12px;background: url("../images/icon_music.png") no-repeat center;background-size: 100%;}
 .plist-info .mint-cell-title{padding-left: 5px}
 .plist-desp{width: 100%;padding: 12px;font-size: 16px;position: relative;text-align: justify;}
@@ -78,14 +79,25 @@ a{text-decoration: none !important;}
 .play-next{background: url("../images/play_next.png") no-repeat;background-size: 60% auto;background-position: center}
 .detail_player-lrc{width: 100%;height: 60px;overflow: hidden;margin-bottom: 20px;text-align: center;color: #fff;line-height: 20px;}
 .lrc-content{transition: all .5s;transform: translateZ(0)}
+.lrc-content .disCurrentLrc:last-of-type{
+    color: orange;
+}
 
-/* over ride */
-.mint-cell{padding-left: 10px}
-.mint-cell-wrapper{background-origin: border-box !important;}
+/* override */
+.mint-cell{padding-left: 10px;min-height: 52px}
 .rank .mint-cell-wrapper{padding: 10px 5px;}
 .plist .mint-cell-wrapper{padding: 10px 5px;}
 .ringtone .mint-cell-wrapper{padding: 5px 0 5px 5px}
 .singer_list .mint-cell-wrapper{padding: 10px 5px}
+.mint-cell-wrapper{
+    background-image: none;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 14px;
+}
+
+.mint-cell-title{
+    padding-right: 10px;
+}
 
 /* media query */
 @media screen and (max-width: 320px){

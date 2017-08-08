@@ -10,14 +10,14 @@
 
     <div class="search-list" v-show="togglePanel">
       <div class="search-list-title">最近热门</div>
-      <mt-cell v-for="(item,index) in hotList" :title="item" @click.native="replaceInput(index)"></mt-cell>
+      <mt-cell v-for="(item,index) in hotList" :title="item.keyword" @click.native="replaceInput(index)" :key="index"></mt-cell>
     </div>
 
     <div class="songs-list" v-show="!togglePanel">
       <div class="search-total">
         共有{{total}}条搜索结果
       </div>
-      <mt-cell v-for="(item,index) in songList" :title="item.filename" @click.native="playAudio(index)">
+      <mt-cell v-for="(item,index) in songList" :title="item.filename" @click.native="playAudio(index)" :key="index">
         <img src="../assets/images/download_icon.png" width="20" height="20">
       </mt-cell>
     </div>
@@ -26,47 +26,48 @@
 
 <script type="es6">
   import { Indicator } from 'mint-ui'
-  import { INIT, PLAY_AUDIO } from '../mixins'
+  import { PLAY_AUDIO } from '../mixins'
   export default {
-    mixins: [INIT, PLAY_AUDIO],
+    mixins: [PLAY_AUDIO],
     data(){
       return {
         keyword: '',
         hotList: [],
         togglePanel: true,
-        total: null
+        total: null,
+	      songList: []
       }
+    },
+    created(){
+    	this.getList()
     },
     methods: {
       getList(){
         Indicator.open({
           text: '加载中...',
-          spinnerType: 'fading-circle'
+          spinnerType: 'snake'
         });
-        this.$http.get('http://cs003.m2828.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/hot?plat=0&count=30&url2=').then(res=> {
-          var list = JSON.parse(res.data).data.info;
-          this.hotList = [...list.map(({keyword})=>keyword)];
-          Indicator.close();
+        this.$http.get('/aproxy/api/v3/search/hot?format=json&plat=0&count=30').then(({data})=> {
+					Indicator.close();
+	        this.hotList = data.data.info
         });
       },
       replaceInput(index){
-        this.keyword = this.hotList[index];
-        this.search();
+        this.keyword = this.hotList[index]
+        this.Search()
       },
       search(){
-        this.togglePanel = false;
+        this.togglePanel = false
         Indicator.open({
           text: '加载中...',
           spinnerType: 'snake'
-        });
-        this.$http.get('http://cs003.m2828.com/apis/proxy.php?val=&url1=http://mobilecdn.kugou.com/api/v3/search/song?keyword=' + this.keyword + '&page=1&pagesize=30&url2=').then(res=> {
-          var list = JSON.parse(res.data).data.info;
-          this.total = JSON.parse(res.data).data.total
-          this.songList = [...list.map(
-            ({filename,hash})=>({filename, hash})
-          )];
-          Indicator.close();
-        });
+        })
+	      if(this.keyword)
+        this.$http.get(`/aproxy/api/v3/search/song?format=json&keyword=${this.keyword}&page=1&pagesize=30&showtype=1`).then(({data})=> {
+	        this.songList = data.data.info
+	        this.total = data.data.total
+          Indicator.close()
+        })
       }
     }
   }

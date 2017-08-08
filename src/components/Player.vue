@@ -20,7 +20,6 @@
 
 <script type="es6">
   import { mapGetters } from 'vuex'
-  import { Spinner } from 'mint-ui'
 
   export default {
     name: 'player',

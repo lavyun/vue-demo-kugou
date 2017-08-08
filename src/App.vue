@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-    <k-head></k-head>
+    <Head />
     <div class="main">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
     </div>
-    <player></player>
-    <detail-player></detail-player>
-  </div>
+    <Player />
+	  <DetailPlayer />
+	</div>
 </template>
 
-<script type="es6">
-  import kHead from './components/header/head'
-  import player from './components/player'
-  import detailPlayer from './components/detail_player'
+<script>
+  import Head from './components/header/Head'
+  import Player from './components/Player'
+  import DetailPlayer from './components/DetailPlayer'
   export default {
-    name: 'app',
     components: {
-      kHead, player, detailPlayer
+      Head, Player, DetailPlayer
     }
   }
 </script>

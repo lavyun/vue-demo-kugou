@@ -4,7 +4,12 @@
 vuejs仿写酷狗音乐webapp
 -----------------
 
-由于接口跨域，所以可下载到本地开发模式下预览
+在线预览：
+----
+
+在线预览使用nuxt重写的demo
+[vue-kugou-demo-nuxt](http://github.com/lavyun/vue-kugou-demo-nuxt)
+
 
 项目截图：
 ----

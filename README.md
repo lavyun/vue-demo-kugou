@@ -8,7 +8,7 @@ vuejs仿写酷狗音乐webapp
 ----
 
 在线预览使用nuxt重写的demo
-[vue-kugou-demo-nuxt](http://github.com/lavyun/vue-kugou-demo-nuxt)
+[vue-kugou-demo-nuxt](http://github.com/lavyun/vue-demo-kugou-nuxt)
 
 
 项目截图：

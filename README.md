@@ -13,9 +13,9 @@ vuejs仿写酷狗音乐webapp
 
 项目截图：
 ----
-![](http://opj15jbpo.bkt.clouddn.com/81854091-77E3-413F-BB11-0C24F27744BE.png)<br><br>
-![](http://opj15jbpo.bkt.clouddn.com/0B7FDF5C-F820-4C43-BA7F-A82CDB464F29.png)<br><br>
-![](http://opj15jbpo.bkt.clouddn.com/9F60D9FD-3463-46F2-848A-62D4AAD4A1BB.png)<br><br>
+![](http://opj15jbpo.bkt.clouddn.com/81854091-77E3-413F-BB11-0C24F27744BE.png?imageView2/3/w/400/h/200/q/75|imageslim)<br><br>
+![](http://opj15jbpo.bkt.clouddn.com/0B7FDF5C-F820-4C43-BA7F-A82CDB464F29.png?imageView2/3/w/400/h/200/q/75|imageslim)<br><br>
+![](http://opj15jbpo.bkt.clouddn.com/9F60D9FD-3463-46F2-848A-62D4AAD4A1BB.png?imageView2/3/w/400/h/200/q/75|imageslim)<br><br>
 
 如何使用
 ----

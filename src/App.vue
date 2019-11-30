@@ -1,24 +1,33 @@
 <template>
   <div id="app">
-    <Head />
+    <header-main></header-main>
     <div class="main">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
     </div>
-    <Player />
-	  <DetailPlayer />
-	</div>
+    <control-player></control-player>
+    <detail-player></detail-player>
+  </div>
 </template>
 
 <script>
-  import Head from './components/header/Head'
-  import Player from './components/Player'
-  import DetailPlayer from './components/DetailPlayer'
-  export default {
-    components: {
-      Head, Player, DetailPlayer
-    }
+import HeaderMain from './components/header/header-main'
+import ControlPlayer from './components/control-player'
+import DetailPlayer from './components/detail-player'
+export default {
+  components: {
+    HeaderMain,
+    ControlPlayer,
+    DetailPlayer
   }
+}
 </script>
 
+<style lang="less" scoped>
+#app {
+  .main {
+    margin-top: 94px;
+  }
+}
+</style>

@@ -5,16 +5,17 @@ import store from './store'
 import mint from 'mint-ui'
 import axios from 'axios'
 import 'mint-ui/lib/style.css'
-import './assets/css/neat-min.css'
-import './assets/css/style.css'
-Vue.use(mint)
+import './assets/styles/base.css'
+import './assets/styles/reset.less'
 
+Vue.use(mint)
 Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
-new Vue({
+window.$app = new Vue({
   el: '#app',
   router,
   store,
-  render: h => h(App)
+  components: { App },
+  template: '<App />'
 })
